@@ -1,0 +1,18 @@
+// Colors
+$primary: #cef6c9;
+$input-bg: #cef6c922;
+$input-focus-bg: #ffffff;
+
+// Padding & Margin & Gap
+$spacer: 1rem;
+$spacers: (
+	0: 0,
+	1: $spacer * 0.75,
+	2: $spacer,
+	3: $spacer * 1.25,
+	4: $spacer * 1.5,
+	5: $spacer * 1.875,
+	6: $spacer * 3.375,
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
