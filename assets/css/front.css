@@ -37,7 +37,7 @@ button {
 }
 
 .cursor-pointer {
-	cursor: pointer;
+	cursor: pointer !important;
 }
 
 .card-thunder {
@@ -125,4 +125,13 @@ button {
 
 .anim-hover-underline:hover {
 	border-bottom: 1px solid #73cc67;
+}
+
+/* Begin Animation */
+.anim-scroll-opacity {
+	opacity: 0;
+}
+
+.anim-scroll-opacity.active {
+	opacity: 1;
 }
