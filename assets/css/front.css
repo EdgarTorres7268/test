@@ -1,0 +1,41 @@
+/* Global */
+@font-face {
+	font-family: RedRose;
+	src: url("../fonts/RedRose-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: RedRoseBold;
+	src: url("../fonts/RedRose-Bold.ttf");
+	font-weight: bold;
+	font-style: normal;
+}
+
+* {
+	font-family: Red-Rose, sans-serif;
+}
+
+a {
+	text-decoration: none !important;
+	color: inherit !important;
+	font-weight: bold;
+	font-family: RedRoseBold, sans-serif !important;
+}
+
+button {
+	padding: 0;
+	font-weight: bold;
+	font-family: RedRoseBold, sans-serif !important;
+	background-color: transparent;
+	border: 0;
+}
+
+.bg-main {
+	background-image: linear-gradient(to right, #ecffc4, #cef6c9);
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}

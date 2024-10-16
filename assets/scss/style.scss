@@ -1,7 +1,25 @@
+// Fonts
+@font-face {
+	font-family: RedRose;
+	src: url("../fonts/RedRose-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: RedRoseBold;
+	src: url("../fonts/RedRose-Bold.ttf");
+	font-weight: bold;
+	font-style: normal;
+}
+
 // Colors
-$primary: #cef6c9;
-$input-bg: #cef6c922;
-$input-focus-bg: #ffffff;
+$primary: #59c24b;
+$secondary: #f8f5f5;
+
+// Typography
+$headings-margin-bottom: 0;
+$headings-font-family: RedRoseBold, sans-serif;
 
 // Padding & Margin & Gap
 $spacer: 1rem;
@@ -13,6 +31,12 @@ $spacers: (
 	4: $spacer * 1.5,
 	5: $spacer * 1.875,
 	6: $spacer * 3.375,
+	s: $spacer * 0.5,
+	m: 40px,
+	l: 70px,
+	x: 80px,
 );
+
+// Buttons
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
