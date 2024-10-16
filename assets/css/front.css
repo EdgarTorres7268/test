@@ -39,3 +39,90 @@ button {
 .cursor-pointer {
 	cursor: pointer;
 }
+
+.card-thunder {
+	position: relative;
+}
+
+.card-thunder::after {
+	z-index: 999;
+	position: absolute;
+	content: "";
+	background-image: url("../images/thunder.svg");
+	width: 289px;
+	height: 333px;
+	bottom: -130px;
+	left: -180px;
+}
+
+.form-icon-group {
+	position: relative;
+}
+
+.form-icon-group .form-control {
+	padding-left: 5rem !important;
+}
+
+.form-icon-group .form-start-icon {
+	position: absolute;
+	top: 50%;
+	left: 2.5rem;
+	transform: translate(-50%, -50%);
+	width: 45px;
+	height: 45px;
+	border-radius: 0.5rem;
+	background-color: white;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Animation */
+.anim-sm {
+	transition: all 0.2s ease-in-out;
+}
+
+.anim {
+	transition: all 0.3s ease-in-out;
+}
+
+.anim-lg {
+	transition: all 0.6s ease-in-out;
+}
+
+.anim-xl {
+	transition: all 0.9s ease-in-out;
+}
+
+.anim-delay-sm {
+	transition-delay: 0.2s;
+}
+
+.anim-delay {
+	transition-delay: 0.3s;
+}
+
+.anim-delay-lg {
+	transition-delay: 0.4s;
+}
+
+.anim-delay-xl {
+	transition-delay: 0.6s;
+}
+
+.anim-hover-scale:hover {
+	transform: scale(1.08);
+}
+
+.anim-hover-up:hover {
+	transform: translateY(-5px);
+}
+
+.anim-hover-underline {
+	border-bottom: 1px solid transparent;
+}
+
+.anim-hover-underline:hover {
+	border-bottom: 1px solid #73cc67;
+}
