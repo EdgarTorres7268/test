@@ -1,0 +1,18 @@
+[data-bs-theme="dark"] {
+	.bg-mode {
+		background-color: #282828;
+	}
+
+	.bg-main {
+		background-image: none;
+		background-color: #191919;
+	}
+
+	.bg-card {
+		background-color: white;
+	}
+
+	.bg-alert {
+		background-color: black;
+	}
+}
