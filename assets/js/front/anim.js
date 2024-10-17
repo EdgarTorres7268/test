@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const carouselPrevBtn = document.querySelector(".carousel-prev");
 	const carouselNextBtn = document.querySelector(".carousel-next");
 	const carouselBody = document.querySelector(".carousel");
+	if (!carouselPrevBtn || !carouselNextBtn || !carouselBody) return;
 	const totalItems = carouselBody.children.length;
 	const itemsToShow = carouselBody.dataset.itemCnt;
 
@@ -120,8 +121,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	var activeNth = 0;
 
 	const testimonialWrapper = document.querySelector(".testimonial-wrapper");
+	if (!testimonialWrapper) return;
 	const testimonialList = testimonialWrapper.querySelector(".testimonial-list");
 	const testimonialBtn = testimonialWrapper.querySelectorAll(".testimonial-btn");
+
+	if (!testimonialList || !testimonialBtn) return;
+
 	const itemsCnt = testimonialList.children.length;
 
 	for (let i = 0; i < itemsCnt; i++) {
