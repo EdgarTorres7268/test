@@ -1,3 +1,4 @@
+// Animation Opacity
 document.addEventListener("DOMContentLoaded", () => {
 	const animScrollOpacities = document.querySelectorAll(".anim-scroll-opacity");
 	const observer = new IntersectionObserver(
@@ -7,6 +8,38 @@ document.addEventListener("DOMContentLoaded", () => {
 					entry.target.classList.add("active");
 				} else {
 					// entry.target.classList.remove("active");
+				}
+			});
+		},
+		{ root: null, rootMargin: "0px", threshold: 0.2 }
+	);
+
+	Array.from(animScrollOpacities).forEach((elem) => {
+		observer.observe(elem);
+	});
+});
+
+// Animation Typing
+document.addEventListener("DOMContentLoaded", () => {
+	const animScrollOpacities = document.querySelectorAll(".anim-scroll-typing");
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const text = entry.target.textContent;
+					entry.target.style.minHeight = window.getComputedStyle(entry.target).height;
+					entry.target.textContent = "";
+					const speed = entry.target.dataset.speed || 50;
+					const delay = entry.target.dataset.delay || 1000;
+					let i = 0;
+					function typing() {
+						if (i < text.length) {
+							entry.target.textContent += text.charAt(i);
+							i++;
+							setTimeout(typing, speed);
+						}
+					}
+					setTimeout(typing, delay);
 				}
 			});
 		},
@@ -126,14 +159,4 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		}
 	};
-
-	// const testimonialBtn = document.createElement("div");
-	// testimonialBtn.classList.add("d-flex", "justify-content-center", "gap-4");
-	// for (let i = 0; i < itemsCnt; i++) {
-	// 	const btn = document.createElement('button')
-	// 	btn.classList.add("anim anim-scroll-opacity")
-
-	// }
-
-	// testimonialWrapper.appendChild(testimonialBtn);
 });
