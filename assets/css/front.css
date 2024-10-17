@@ -149,7 +149,7 @@ button {
 }
 
 .anim-scroll-left {
-	transform: translateX(20px);
+	transform: translateX(30px);
 }
 
 .anim-scroll-left.active {
@@ -157,7 +157,7 @@ button {
 }
 
 .anim-scroll-right {
-	transform: translateX(-20px);
+	transform: translateX(-30px);
 }
 
 .anim-scroll-right.active {
@@ -165,3 +165,12 @@ button {
 }
 
 /* FAQ Section */
+.dropdown-body {
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+}
+
+.dropdown-body.active {
+	opacity: 1;
+}

@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
+// Services Section
 document.addEventListener("DOMContentLoaded", () => {
 	let currentCarousel = 0;
 	const carouselPrevBtn = document.querySelector(".carousel-prev");
@@ -62,4 +63,21 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	updateButtonStates();
+});
+
+// FAQ Section
+document.addEventListener("DOMContentLoaded", () => {
+	document.querySelectorAll(".dropdown-container").forEach((card) => {
+		card.addEventListener("click", () => {
+			const cardBody = card.querySelector(".dropdown-body");
+			const cardIcons = card.querySelector(".dropdown-icons");
+			const isActive = cardBody.classList.toggle("active");
+
+			cardBody.style.maxHeight = isActive ? `${cardBody.scrollHeight}px` : 0;
+			for (let i = 0; i < cardIcons.children.length; i++) {
+				const moveAmount = window.getComputedStyle(cardIcons).maxHeight;
+				cardIcons.children[i].style.transform = isActive ? `translateX(-${moveAmount})` : `translateX(0)`;
+			}
+		});
+	});
 });
