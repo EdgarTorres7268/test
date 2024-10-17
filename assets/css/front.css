@@ -178,3 +178,11 @@ button {
 .dropdown-body.active {
 	opacity: 1;
 }
+
+/* Testimonial Section */
+.testimonial-btn {
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 0.4rem;
+	background-color: #bebaba;
+}

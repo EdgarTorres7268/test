@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 	const animScrollOpacities = document.querySelectorAll(".anim-scroll-opacity");
 	const observer = new IntersectionObserver(
 		(entries) => {
@@ -80,4 +80,25 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	});
+});
+
+// Testimonial Section
+document.addEventListener("DOMContentLoaded", () => {
+	var activeNth = 1;
+
+	const testimonialWrapper = document.querySelector(".testimonial-wrapper");
+	const testimonialList = testimonialWrapper.querySelector(".testimonial-list");
+
+	const itemsCnt = testimonialList.children.length;
+
+	for (let i = 0; i < itemsCnt; i++) {
+		const list = testimonialList.children[i];
+		if (activeNth != i) list.style.transform = "scale(0.8)";
+		list.style.transformOrigin = "80% 50%";
+	}
+
+	const testimonialBtn = document.createElement("div");
+	testimonialBtn.classList.add("d-flex", "justify-content-center", "gap-4");
+
+	testimonialWrapper.appendChild(testimonialBtn);
 });
