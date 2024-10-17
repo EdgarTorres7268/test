@@ -40,6 +40,10 @@ button {
 	cursor: pointer !important;
 }
 
+.card {
+	border: none !important;
+}
+
 .card-thunder {
 	position: relative;
 }

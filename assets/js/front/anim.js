@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			cardBody.style.maxHeight = isActive ? `${cardBody.scrollHeight}px` : 0;
 			for (let i = 0; i < cardIcons.children.length; i++) {
 				const moveAmount = window.getComputedStyle(cardIcons).maxHeight;
-				cardIcons.children[i].style.transform = isActive ? `translateX(-${moveAmount})` : `translateX(0)`;
+				cardIcons.children[i].style.transform = isActive ? `translateY(-${moveAmount})` : `translateY(0)`;
 			}
 		});
 	});

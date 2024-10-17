@@ -81,7 +81,7 @@
 					</h5>
 				</div>
 				<div class="d-flex gap-6 me-1 pe-2">
-					<div class="card py-4 px-3">
+					<div class="card py-4 px-3 cursor-pointer anim anim-hover-scale">
 						<div class="mb-2">
 							<i class="fa-solid fa-note-sticky p-2 fs-5 rounded-3" style="background-color: #f8f5f5"></i>
 						</div>
@@ -90,7 +90,7 @@
 							<h5 class="fw-bolder">Every An Order</h5>
 						</div>
 					</div>
-					<div class="card py-4 px-3">
+					<div class="card py-4 px-3 cursor-pointer anim anim-hover-scale">
 						<div class="mb-2">
 							<i class="fa-solid fa-clipboard-check p-2 fs-5 rounded-3" style="background-color: #f8f5f5"></i>
 						</div>
@@ -99,7 +99,7 @@
 							<h5 class="fw-bolder">Orders Completed</h5>
 						</div>
 					</div>
-					<div class="card py-4 px-3">
+					<div class="card py-4 px-3 cursor-pointer anim anim-hover-scale">
 						<div class="mb-2">
 							<i class="fa-solid fa-note-sticky p-2 fs-5 rounded-3" style="background-color: #f8f5f5"></i>
 						</div>
@@ -214,7 +214,7 @@
 				<div class="d-flex flex-column gap-2 mx-auto" style="max-width: 1060px">
 					<div class="px-5 py-4 card cursor-pointer anim-lg anim-scroll-right anim-scroll-opacity dropdown-container">
 						<div class="d-flex align-items-center" style="gap: 40px">
-							<div class="rounded-2 bg-secondary d-flex sx-child overflow-hidden dropdown-icons">
+							<div class="rounded-2 bg-secondary d-flex flex-column sx-child overflow-hidden dropdown-icons">
 								<i class="p-1 fa-solid fa-circle-question fs-4 anim-lg"></i>
 								<i class="p-1 fa-solid fa-comment-dots fs-4 anim-lg"></i>
 							</div>
@@ -227,7 +227,7 @@
 					</div>
 					<div class="px-5 py-4 card cursor-pointer anim-lg anim-scroll-right anim-scroll-opacity dropdown-container">
 						<div class="d-flex align-items-center" style="gap: 40px">
-							<div class="rounded-2 bg-secondary d-flex sx-child overflow-hidden dropdown-icons">
+							<div class="rounded-2 bg-secondary d-flex flex-column sx-child overflow-hidden dropdown-icons">
 								<i class="p-1 fa-solid fa-circle-question fs-4 anim-lg"></i>
 								<i class="p-1 fa-solid fa-comment-dots fs-4 anim-lg"></i>
 							</div>
@@ -240,7 +240,7 @@
 					</div>
 					<div class="px-5 py-4 card cursor-pointer anim-lg anim-scroll-right anim-scroll-opacity dropdown-container">
 						<div class="d-flex align-items-center" style="gap: 40px">
-							<div class="rounded-2 bg-secondary d-flex sx-child overflow-hidden dropdown-icons">
+							<div class="rounded-2 bg-secondary d-flex flex-column sx-child overflow-hidden dropdown-icons">
 								<i class="p-1 fa-solid fa-circle-question fs-4 anim-lg"></i>
 								<i class="p-1 fa-solid fa-comment-dots fs-4 anim-lg"></i>
 							</div>
@@ -253,7 +253,7 @@
 					</div>
 					<div class="px-5 py-4 card cursor-pointer anim-lg anim-scroll-right anim-scroll-opacity dropdown-container">
 						<div class="d-flex align-items-center" style="gap: 40px">
-							<div class="rounded-2 bg-secondary d-flex sx-child overflow-hidden dropdown-icons">
+							<div class="rounded-2 bg-secondary d-flex flex-column sx-child overflow-hidden dropdown-icons">
 								<i class="p-1 fa-solid fa-circle-question fs-4 anim-lg"></i>
 								<i class="p-1 fa-solid fa-comment-dots fs-4 anim-lg"></i>
 							</div>
@@ -266,23 +266,81 @@
 					</div>
 				</div>
 			</section>
-			<h1 class="text-center my-x">Hello</h1>
-			<sectioni id="testimonial" class="mx-auto">
-				<div class="slider-wrapper">
-					<button data-btn="previos"><</button>
-					<div class="slider">
-						<div class="slide bg-primary" data-type="before"></div>
-						<div class="slide bg-primary" data-type="active"></div>
-						<div class="slide bg-primary" data-type="active"></div>
-						<div class="slide bg-primary" data-type="active"></div>
-						<div class="slide bg-primary" data-type="after"></div>
-						<div class="slide bg-primary" data-type></div>
-						<div class="slide bg-primary"></div>
-						<div class="slide bg-primary"></div>
+			<section id="testimonial" class="mx-auto pb-6 mb-5 px-lg" style="width: 80%">
+				<h1 class="text-center fw-bold py-6 anim-lg anim-delay-lg anim-scroll-opacity anim-scroll-up">Here's what <br />our clients say</h1>
+				<div class="mb-4 d-flex anim-xl anim-delay-xl anim-scroll-opacity anim-scroll-right">
+					<div class="card p-5 rounded-5">
+						<h5 class="mb-5">
+							"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio voluptatibus architecto cum temporibus eos rerum soluta hic blanditiis! Necessitatibus voluptatum
+							quidem blanditiis ut odit recusandae fugiat nihil, exercitationem sed iusto nisi id, sapiente accusantium saepe"
+						</h5>
+						<div class="d-flex justify-content-between">
+							<div>
+								<h5 class="fw-bold">Name of Client 1</h5>
+								<h6 style="color: #606b86">Company of Client</h6>
+							</div>
+							<div>
+								<img src="../../assets/images/quote.svg" />
+								<img src="../../assets/images/quote.svg" />
+							</div>
+						</div>
 					</div>
-					<button data-btn="next">></button>
+					<div class="card p-5 rounded-5">
+						<h5 class="mb-5">
+							"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio voluptatibus architecto cum temporibus eos rerum soluta hic blanditiis! Necessitatibus voluptatum
+							quidem blanditiis ut odit recusandae fugiat nihil, exercitationem sed iusto nisi id, sapiente accusantium saepe"
+						</h5>
+						<div class="d-flex justify-content-between">
+							<div>
+								<h5 class="fw-bold">Name of Client 2</h5>
+								<h6 style="color: #606b86">Company of Client</h6>
+							</div>
+							<div>
+								<img src="../../assets/images/quote.svg" />
+								<img src="../../assets/images/quote.svg" />
+							</div>
+						</div>
+					</div>
+					<div class="card p-5 rounded-5">
+						<h5 class="mb-5">
+							"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio voluptatibus architecto cum temporibus eos rerum soluta hic blanditiis! Necessitatibus voluptatum
+							quidem blanditiis ut odit recusandae fugiat nihil, exercitationem sed iusto nisi id, sapiente accusantium saepe"
+						</h5>
+						<div class="d-flex justify-content-between">
+							<div>
+								<h5 class="fw-bold">Name of Client 3</h5>
+								<h6 style="color: #606b86">Company of Client</h6>
+							</div>
+							<div>
+								<img src="../../assets/images/quote.svg" />
+								<img src="../../assets/images/quote.svg" />
+							</div>
+						</div>
+					</div>
+					<div class="card p-5 rounded-5">
+						<h5 class="mb-5">
+							"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio voluptatibus architecto cum temporibus eos rerum soluta hic blanditiis! Necessitatibus voluptatum
+							quidem blanditiis ut odit recusandae fugiat nihil, exercitationem sed iusto nisi id, sapiente accusantium saepe"
+						</h5>
+						<div class="d-flex justify-content-between">
+							<div>
+								<h5 class="fw-bold">Name of Client 4</h5>
+								<h6 style="color: #606b86">Company of Client</h6>
+							</div>
+							<div>
+								<img src="../../assets/images/quote.svg" />
+								<img src="../../assets/images/quote.svg" />
+							</div>
+						</div>
+					</div>
 				</div>
-			</sectioni>
+				<div class="d-flex gap-4 justify-content-center">
+					<button class="btn-testimonial active anim"></button>
+					<button class="btn-testimonial anim"></button>
+					<button class="btn-testimonial anim"></button>
+					<button class="btn-testimonial anim"></button>
+				</div>
+			</section>
 		</main>
 		<footer class="bg-main d-flex justify-content-between align-items-center pt-xx px-6 pb-x">
 			<div class="d-flex gap-1 flex-column">

@@ -1,0 +1,10 @@
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	transition: transform 0.5s ease; /* Smooth transition for the transform property */
+}
+
+.active {
+	background-color: green; /* Change color to indicate the active state */
+}
