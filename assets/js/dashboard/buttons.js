@@ -33,8 +33,39 @@ function dropdownAction() {
 	}
 }
 
+function favoriteAction() {
+	const favButtons = document.getElementsByClassName("btn-favorite");
+	for (const favBtn of favButtons) {
+		favBtn.addEventListener("click", function () {
+			if (favBtn.classList.contains("text-black")) {
+				favBtn.classList.remove("text-black");
+				favBtn.classList.add("text-warning");
+			} else {
+				favBtn.classList.add("text-black");
+				favBtn.classList.remove("text-warning");
+			}
+		});
+	}
+}
+
+function copyAction() {
+	const copyButtons = document.querySelectorAll(".btn-copy");
+	if (copyButtons) {
+		for (const copyBtn of copyButtons) {
+			copyBtn.addEventListener("click", function () {
+				const textToCopy = document.getElementById("copy-text")
+					? document.getElementById("copy-text").value || document.getElementById("copy-text").innerText
+					: copyBtn.parentElement.innerText;
+				navigator.clipboard.writeText(textToCopy);
+			});
+		}
+	}
+}
+
 dropdownAction();
 alertAction();
+favoriteAction();
+copyAction();
 
 // const refreshBtns = document.getElementsByClassName("btn-refresh");
 
@@ -71,30 +102,6 @@ alertAction();
 // 			filterMenu.classList.remove("show");
 // 		}
 // 	});
-
-const favButtons = document.getElementsByClassName("btn-favorite");
-for (const favBtn of favButtons) {
-	favBtn.addEventListener("click", function () {
-		if (favBtn.classList.contains("text-black")) {
-			favBtn.classList.remove("text-black");
-			favBtn.classList.add("text-warning");
-		} else {
-			favBtn.classList.add("text-black");
-			favBtn.classList.remove("text-warning");
-		}
-	});
-}
-
-// const copyBtns = document.querySelectorAll(".btn-copy");
-// if (copyBtns) {
-// 	for (const copyBtn of copyBtns) {
-// 		copyBtn.addEventListener("click", function () {
-// 			const textToCopy = document.getElementById("copy-text") ? document.getElementById("copy-text").value || document.getElementById("copy-text").innerText : copyBtn.parentElement.innerText;
-// 			console.log(textToCopy);
-// 			navigator.clipboard.writeText(textToCopy);
-// 		});
-// 	}
-// }
 
 // const toggleSocialBtn = document.getElementById("btn-toggle-social");
 // const toggleContent = document.querySelector(".toggle-div");

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/dashboard.css" />
+		<link rel="stylesheet" href="../../assets/css/dashboard-dark.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css" />
+		<title>Panel 1</title>
+	</head>
+	<!-- sidebar is 130px wide -->
+	<body class="bg-mode">
+		<section id="sidebar" class="bg-main py-3 px-5 d-flex align-items-center flex-column position-fixed vh-100">
+			<button class="fa-solid fa-ellipsis fs-1 mb-3"></button>
+			<button class="fa-solid fa-globe fs-1"></button>
+			<div style="margin-top: 85px" class="d-flex flex-column gap-3">
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu active"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+			</div>
+			<div class="mt-auto mb-4 d-flex gap-4 flex-column justify-content-center align-items-center">
+				<button class="fa-solid fa-user-gear fs-4"></button>
+				<button class="fa-solid fa-right-from-bracket fs-4"></button>
+			</div>
+		</section>
+		<section id="sticky-menu" class="p-4 rounded-4 menu" style="transition: all 0.2s ease-in-out">
+			<div class="menu-header cursor-pointer d-flex gap-2 align-items-center">
+				<h5>Hello, username!</h5>
+				<button class="fa-regular fa-eye fs-4 fw-bold"></button>
+			</div>
+			<div class="menu-body px-1 d-flex flex-column gap-2 py-4 overflow-hidden text-black">
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Total Orders</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">119,354</div>
+				</div>
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Current Balance</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">$524,158</div>
+				</div>
+			</div>
+		</section>
+		<section id="mode-switch-wrapper" class="rounded-pill bg-grey border text-black">
+			<i class="fa-regular fa-sun fs-4 p-1" style="width: 3rem"></i>
+			<i class="fa-solid fa-moon fs-4 p-1" style="width: 3rem"></i>
+			<button id="mode-switch" class="position-absolute"></button>
+		</section>
+		<main id="main" style="padding-top: 160px; padding-left: 140px; max-width: 1421px" class="d-flex flex-column mx-auto">
+			<div class="bg-alert text-white rounded-3 overflow-hidden alert-dlg" style="padding: 30px; margin-bottom: 24px">
+				<div class="alert-header fs-4 fw-bold rounded-top-3 d-flex justify-content-between align-items-center">
+					Your Order Received!
+					<button class="fas fa-circle-plus fs-3 text-white btn-alert-close" style="transform: rotate(45deg)"></button>
+				</div>
+				<div class="d-flex gap-1 flex-column mt-5">
+					<div class="d-flex w-100 align-items-center">
+						<h6 class="fs-sm fw-bold text-white" style="width: 15%">ID</h6>
+						<div class="fs-sm rounded-1 bg-white text-black p-2 gap-1 d-flex align-items-center">
+							<h6 class="fw-bold" id="copy-text">644217690</h6>
+							<button type="button" class="btn-copy d-flex" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="ID copied">
+								<img src="../../assets/fontawesome/svgs/solid/copy.svg" width="16px" height="16px" />
+							</button>
+						</div>
+					</div>
+					<div class="d-flex w-100 align-items-center">
+						<h6 class="fw-bold text-white fs-sm" style="width: 15%">Service</h6>
+						<h6 class="fs-sm text-white d-flex align-items-center fw-light">
+							:&nbsp;&nbsp;&nbsp;Website Traffic From Facebook [Start Time: 0 - 12 Hours] [Speed: 50K/Day]
+							<img src="../../assets/images/droplet.png" width="18px" height="18px" />
+						</h6>
+					</div>
+					<div class="d-flex w-100 align-items-center">
+						<h6 class="fs-sm fw-bold text-white" style="width: 15%">Link</h6>
+						<h6 class="fs-sm text-white fw-light">:&nbsp;&nbsp;&nbsp;https://domain.com</h6>
+					</div>
+					<div class="d-flex w-100 align-items-center">
+						<h6 class="fw-bold text-white fs-sm" style="width: 15%">Quantity</h6>
+						<h6 class="text-white fw-light fs-sm">:&nbsp;&nbsp;&nbsp;2000</h6>
+					</div>
+					<div class="d-flex w-100 align-items-center">
+						<h6 class="fw-bold text-white fs-sm" style="width: 15%">Charge</h6>
+						<h6 class="text-white fw-light fs-sm">:&nbsp;&nbsp;&nbsp;$0.03</h6>
+					</div>
+					<div class="d-flex w-100 align-items-center">
+						<h6 class="fw-bold text-white fs-sm" style="width: 15%">Balance</h6>
+						<h6 class="text-white fw-light fs-sm">:&nbsp;&nbsp;&nbsp;$1,006</h6>
+					</div>
+				</div>
+			</div>
+			<div class="bg-card pt-m px-6 pb-6 rounded-3">
+				<div class="d-flex justify-content-between align-items-center">
+					<h4>Mass Order</h4>
+					<button class="fa-solid fa-sliders fw-bold fs-4"></button>
+				</div>
+				<textarea class="form-control my-5 text-black fs-5" rows="15"></textarea>
+				<button class="bg-submit mt-3 w-100 py-4 rounded-2 fw-bold fs-5">Submit</button>
+			</div>
+		</main>
+		<section id="copyright" class="fs-6 fw-bold position-fixed" style="bottom: 2rem; right: 3rem">&copy; Copyright. All Right Reserved.</section>
+		<script src="../../assets/js/popper.js"></script>
+		<script src="../../assets/js/bootstrap.min.js"></script>
+		<script src="../../assets/js/custom.js"></script>
+		<script src="../../assets/js/dashboard/color-mode.js"></script>
+		<script src="../../assets/js/dashboard/sticky-menu.js"></script>
+		<script src="../../assets/js/dashboard/buttons.js"></script>
+		<script src="../../assets/js/dashboard/popover.js"></script>
+	</body>
+</html>
