@@ -23,6 +23,26 @@ button {
 	background-color: #373737;
 }
 
+.bg-grey {
+	background-color: #fafafa;
+}
+
+.bg-grey-badge {
+	background-color: #ececec;
+}
+
+.cursor-pointer {
+	cursor: pointer !important;
+}
+
+.menu-body {
+	padding-top: 0;
+	padding-bottom: 0;
+	opacity: 0;
+	max-height: 0;
+	transition: all 0.5s ease-in-out;
+}
+
 /* Sidebar */
 .btn-menu {
 	opacity: 0.5;
@@ -32,6 +52,13 @@ button {
 .btn-menu:hover,
 .btn-menu.active {
 	opacity: 1;
+}
+
+/* Sticky Menu */
+#sticky-menu {
+	position: fixed;
+	top: 1rem;
+	left: 130px;
 }
 
 /* Animation */
