@@ -84,103 +84,112 @@ function socialViewAction() {
 	}
 }
 
+function paginationAction() {
+	const btnPaginationPrev = document.getElementById("btn-pagination-prev");
+	const btnPaginationNext = document.getElementById("btn-pagination-next");
+	const inputPagination = document.getElementById("input-pagination");
+	if (btnPaginationNext && btnPaginationPrev) {
+		const refTable = inputPagination.dataset.tableFor;
+		const dataTable = document.querySelector(refTable) || document.querySelector("tbody");
+		let dataCnt = 0,
+			dataPerPage = 0;
+		if (dataTable) {
+			dataCnt = dataTable.children.length;
+			dataPerPage = parseInt(dataTable.dataset.perPage) || 4;
+			btnPaginationPrev.disabled = true;
+			btnPaginationPrev.style.opacity = 0.5;
+			if (dataCnt <= dataPerPage) {
+				btnPaginationNext.style.opacity = 0.5;
+				btnPaginationNext.disabled = true;
+			}
+		}
+		for (let i = 0; i < dataCnt; i++) {
+			if (i >= (inputPagination.value - 1) * dataPerPage && i < inputPagination.value * dataPerPage) dataTable.children[i].style.display = "table-row";
+			else dataTable.children[i].style.display = "none";
+		}
+		btnPaginationPrev.addEventListener("click", function () {
+			if (inputPagination.value > 1) {
+				inputPagination.value = inputPagination.value - 1;
+				const event = new Event("change");
+				inputPagination.dispatchEvent(event);
+			}
+		});
+		btnPaginationNext.addEventListener("click", function () {
+			if (inputPagination.value < Math.ceil(dataCnt / dataPerPage)) {
+				inputPagination.value = parseInt(inputPagination.value) + 1;
+				const event = new Event("change");
+				inputPagination.dispatchEvent(event);
+			}
+		});
+		inputPagination.addEventListener("change", function () {
+			if (inputPagination.value * dataPerPage > dataCnt + dataPerPage) inputPagination.value = Math.ceil(dataCnt / dataPerPage);
+			if (inputPagination.value == 1) {
+				btnPaginationPrev.disabled = true;
+				btnPaginationPrev.style.opacity = 0.5;
+			} else {
+				btnPaginationPrev.disabled = false;
+				btnPaginationPrev.style.opacity = 1;
+			}
+			if (inputPagination.value == Math.ceil(dataCnt / dataPerPage)) {
+				btnPaginationNext.style.opacity = 0.5;
+				btnPaginationNext.disabled = true;
+			} else {
+				btnPaginationNext.style.opacity = 1;
+				btnPaginationNext.disabled = false;
+			}
+			for (let i = 0; i < dataCnt; i++) {
+				if (i >= (inputPagination.value - 1) * dataPerPage && i < inputPagination.value * dataPerPage) dataTable.children[i].style.display = "table-row";
+				else dataTable.children[i].style.display = "none";
+			}
+		});
+	}
+}
+
+function refreshAction() {
+	const refreshBtns = document.getElementsByClassName("btn-refresh");
+
+	for (const refreshBtn of refreshBtns) {
+		const icon = refreshBtn.querySelector("i");
+		icon.style.transition = "all 1s ease-in";
+		refreshBtn.addEventListener("click", function () {
+			icon.style.transform = "rotate(720deg)";
+			setTimeout(function () {
+				icon.style.transition = null;
+				icon.style.transform = null;
+			}, 1000);
+			icon.style.transition = "all 1s ease";
+		});
+	}
+}
+
+function filterAction() {
+	const filterBtn = document.querySelector(".btn-filter");
+	const filterMenu = document.getElementById("filter-menu");
+
+	if (filterBtn)
+		filterBtn.addEventListener("click", function () {
+			if (filterMenu.classList.contains("show")) filterMenu.classList.remove("show");
+			else filterMenu.classList.add("show");
+		});
+
+	if (filterMenu)
+		filterMenu.addEventListener("click", function (event) {
+			event.stopPropagation();
+		});
+
+	if (filterBtn && filterMenu)
+		document.addEventListener("click", function (event) {
+			if (!filterMenu.contains(event.target) && !filterBtn.contains(event.target)) {
+				filterMenu.classList.remove("show");
+			}
+		});
+}
+
 dropdownAction();
 alertAction();
 favoriteAction();
 copyAction();
 socialViewAction();
-
-// const refreshBtns = document.getElementsByClassName("btn-refresh");
-
-// for (const refreshBtn of refreshBtns) {
-// 	const icon = refreshBtn.querySelector("i");
-// 	icon.style.transition = "all 1s ease-in";
-// 	refreshBtn.addEventListener("click", function () {
-// 		icon.style.transform = "rotate(720deg)";
-// 		setTimeout(function () {
-// 			icon.style.transition = null;
-// 			icon.style.transform = null;
-// 		}, 1000);
-// 		icon.style.transition = "all 1s ease";
-// 	});
-// }
-
-// const filterBtn = document.querySelector(".btn-filter");
-// const filterMenu = document.getElementById("filter-menu");
-
-// if (filterBtn)
-// 	filterBtn.addEventListener("click", function () {
-// 		if (filterMenu.classList.contains("show")) filterMenu.classList.remove("show");
-// 		else filterMenu.classList.add("show");
-// 	});
-
-// if (filterMenu)
-// 	filterMenu.addEventListener("click", function (event) {
-// 		event.stopPropagation();
-// 	});
-
-// if (filterBtn && filterMenu)
-// 	document.addEventListener("click", function (event) {
-// 		if (!filterMenu.contains(event.target) && !filterBtn.contains(event.target)) {
-// 			filterMenu.classList.remove("show");
-// 		}
-// 	});
-
-// const btnPaginationPrev = document.getElementById("btn-pagination-prev");
-// const btnPaginationNext = document.getElementById("btn-pagination-next");
-// const inputPagination = document.getElementById("input-pagination");
-// if (btnPaginationNext && btnPaginationPrev) {
-// 	const refTable = inputPagination.dataset.tableFor;
-// 	const dataTable = document.querySelector(refTable) || document.querySelector("tbody");
-// 	let dataCnt = 0,
-// 		dataPerPage = 0;
-// 	if (dataTable) {
-// 		dataCnt = dataTable.children.length;
-// 		dataPerPage = parseInt(dataTable.dataset.perPage) || 4;
-// 		btnPaginationPrev.disabled = true;
-// 		btnPaginationPrev.style.opacity = 0.5;
-// 		if (dataCnt <= dataPerPage) {
-// 			btnPaginationNext.style.opacity = 0.5;
-// 			btnPaginationNext.disabled = true;
-// 		}
-// 	}
-// 	for (let i = 0; i < dataCnt; i++) {
-// 		if (i >= (inputPagination.value - 1) * dataPerPage && i < inputPagination.value * dataPerPage) dataTable.children[i].style.display = "table-row";
-// 		else dataTable.children[i].style.display = "none";
-// 	}
-// 	btnPaginationPrev.addEventListener("click", function () {
-// 		if (inputPagination.value > 1) {
-// 			inputPagination.value = inputPagination.value - 1;
-// 			const event = new Event("change");
-// 			inputPagination.dispatchEvent(event);
-// 		}
-// 	});
-// 	btnPaginationNext.addEventListener("click", function () {
-// 		if (inputPagination.value < Math.ceil(dataCnt / dataPerPage)) {
-// 			inputPagination.value = parseInt(inputPagination.value) + 1;
-// 			const event = new Event("change");
-// 			inputPagination.dispatchEvent(event);
-// 		}
-// 	});
-// 	inputPagination.addEventListener("change", function () {
-// 		if (inputPagination.value * dataPerPage > dataCnt + dataPerPage) inputPagination.value = Math.ceil(dataCnt / dataPerPage);
-// 		if (inputPagination.value == 1) {
-// 			btnPaginationPrev.disabled = true;
-// 			btnPaginationPrev.style.opacity = 0.5;
-// 		} else {
-// 			btnPaginationPrev.disabled = false;
-// 			btnPaginationPrev.style.opacity = 1;
-// 		}
-// 		if (inputPagination.value == Math.ceil(dataCnt / dataPerPage)) {
-// 			btnPaginationNext.style.opacity = 0.5;
-// 			btnPaginationNext.disabled = true;
-// 		} else {
-// 			btnPaginationNext.style.opacity = 1;
-// 			btnPaginationNext.disabled = false;
-// 		}
-// 		for (let i = 0; i < dataCnt; i++) {
-// 			if (i >= (inputPagination.value - 1) * dataPerPage && i < inputPagination.value * dataPerPage) dataTable.children[i].style.display = "table-row";
-// 			else dataTable.children[i].style.display = "none";
-// 		}
-// 	});
-// }
+paginationAction();
+refreshAction();
+filterAction();
