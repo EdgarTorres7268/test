@@ -20,7 +20,7 @@ button {
 }
 
 .bg-alert {
-	background-color: #373737;
+	background-color: black;
 }
 
 .bg-grey {
@@ -31,12 +31,16 @@ button {
 	background-color: #ececec;
 }
 
+.bg-submit {
+	background-color: black;
+}
+
 .cursor-pointer {
 	cursor: pointer !important;
 }
 
 .menu {
-	transition: background-color 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
 .menu-body {
@@ -45,6 +49,48 @@ button {
 	opacity: 0;
 	max-height: 0;
 	transition: all 0.5s ease-in-out;
+}
+
+.fs-xs {
+	font-size: 10px;
+}
+
+.fs-sm {
+	font-size: 12px;
+}
+
+.alert-dlg {
+	max-height: 600px;
+}
+
+.form-icon-group {
+	position: relative;
+}
+
+.form-icon-group .form-control {
+	padding-right: 5rem;
+}
+
+.form-icon-group .form-end-icon {
+	position: absolute;
+	top: 50%;
+	transform: translate(50%, -65%);
+	width: 25px;
+	height: 25px;
+	border-radius: 0.5rem;
+	background-color: white;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-icon-group .form-end-icon:nth-child(1) {
+	right: 16px;
+}
+
+.form-icon-group .form-end-icon:nth-child(2) {
+	right: 49px;
 }
 
 /* Sidebar */
@@ -62,7 +108,7 @@ button {
 #sticky-menu {
 	position: fixed;
 	top: 1rem;
-	left: 130px;
+	margin-left: 130px;
 }
 
 /* Color Mode Switch */
@@ -86,6 +132,19 @@ button {
 
 #mode-switch.active {
 	right: 3px;
+}
+
+/* Main Section */
+#two-columns {
+	width: 1435px;
+}
+
+#left-section {
+	width: 736px;
+}
+
+#right-section {
+	width: 635px;
 }
 
 /* Animation */

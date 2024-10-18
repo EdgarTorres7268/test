@@ -13,7 +13,11 @@
 	}
 
 	.bg-alert {
-		background-color: black;
+		background-color: #373737;
+	}
+
+	.bg-submit {
+		background-color: #e4fad2;
 	}
 
 	#mode-switch {
