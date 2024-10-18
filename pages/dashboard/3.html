@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/dashboard.css" />
+		<link rel="stylesheet" href="../../assets/css/dashboard-dark.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css" />
+		<title>Panel 1</title>
+	</head>
+	<!-- sidebar is 130px wide -->
+	<body class="bg-mode">
+		<section id="sidebar" class="bg-main py-3 px-5 d-flex align-items-center flex-column position-fixed vh-100">
+			<button class="fa-solid fa-ellipsis fs-1 mb-3"></button>
+			<button class="fa-solid fa-globe fs-1"></button>
+			<div style="margin-top: 85px" class="d-flex flex-column gap-3">
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu active"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+			</div>
+			<div class="mt-auto mb-4 d-flex gap-4 flex-column justify-content-center align-items-center">
+				<button class="fa-solid fa-user-gear fs-4"></button>
+				<button class="fa-solid fa-right-from-bracket fs-4"></button>
+			</div>
+		</section>
+		<section id="sticky-menu" class="p-4 rounded-4 menu" style="transition: all 0.2s ease-in-out">
+			<div class="menu-header cursor-pointer d-flex gap-2 align-items-center">
+				<h5>Hello, username!</h5>
+				<button class="fa-regular fa-eye fs-4 fw-bold"></button>
+			</div>
+			<div class="menu-body px-1 d-flex flex-column gap-2 py-4 overflow-hidden text-black">
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Total Orders</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">119,354</div>
+				</div>
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Current Balance</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">$524,158</div>
+				</div>
+			</div>
+		</section>
+		<section id="mode-switch-wrapper" class="rounded-pill bg-grey border text-black">
+			<i class="fa-regular fa-sun fs-4 p-1" style="width: 3rem"></i>
+			<i class="fa-solid fa-moon fs-4 p-1" style="width: 3rem"></i>
+			<button id="mode-switch" class="position-absolute"></button>
+		</section>
+		<main id="main" style="padding-top: 160px; padding-left: 140px; max-width: 1435px" class="mx-auto">
+			<div class="bg-card p-4 mt-4 rounded-3 w-100" style="min-width: 1435px;;">
+				<h5 class="py-1 fw-bold">
+					Choose a Social Network
+					<input type="checkbox" class="d-none" id="btn-toggle-social" />
+					<label for="btn-toggle-social" class="fa-solid fa-eye" style="cursor: pointer"></label>
+				</h5>
+				<div class="d-grid gap-3 toggle-div px-3 anim-xl" style="grid-template-columns: repeat(5, 1fr); max-height: 0; overflow: hidden">
+					<button class="bg-grey p-4 rounded-4 fs-6 fw-bold d-flex gap-4 align-items-center text-black">
+						<i class="fa-brands fa-twitter bg-grey-badge text-black p-1 fs-5 rounded-3"></i>
+						Social Media
+					</button>
+					<button class="bg-grey p-4 rounded-4 fs-6 fw-bold d-flex gap-4 align-items-center">
+						<i class="fa-brands fa-facebook bg-grey-badge text-black p-1 fs-5 rounded-3"></i>
+						Social Media
+					</button>
+					<button class="bg-grey p-4 rounded-4 fs-6 fw-bold d-flex gap-4 align-items-center">
+						<i class="fa-brands fa-youtube bg-grey-badge text-black p-1 fs-5 rounded-3"></i>
+						Social Media
+					</button>
+					<button class="bg-grey p-4 rounded-4 fs-6 fw-bold d-flex gap-4 align-items-center">
+						<i class="fa-brands fa-whatsapp bg-grey-badge text-black p-1 fs-5 rounded-3"></i>
+						Social Media
+					</button>
+					<button class="bg-grey p-4 rounded-4 fs-6 fw-bold d-flex gap-4 align-items-center">
+						<i class="fa-brands fa-telegram bg-grey-badge text-black p-1 fs-5 rounded-3"></i>
+						Social Media
+					</button>
+					<button class="bg-grey p-4 rounded-4 fs-6 fw-bold d-flex gap-4 align-items-center">
+						<i class="fa-brands fa-discord bg-grey-badge text-black p-1 fs-5 rounded-3"></i>
+						Social Media
+					</button>
+					<button class="bg-grey p-4 rounded-4 fs-6 fw-bold d-flex gap-4 align-items-center">
+						<i class="fa-brands fa-skype bg-grey-badge text-black p-1 fs-5 rounded-3"></i>
+						Social Media
+					</button>
+					<button class="bg-grey p-4 rounded-4 fs-6 fw-bold d-flex gap-4 align-items-center">
+						<i class="fa-brands fa-instagram bg-grey-badge text-black p-1 fs-5 rounded-3"></i>
+						Social Media
+					</button>
+					<button class="bg-grey p-4 rounded-4 fs-6 fw-bold d-flex gap-4 align-items-center">
+						<i class="fa-brands fa-tiktok bg-grey-badge text-black p-1 fs-5 rounded-3"></i>
+						Social Media
+					</button>
+					<button class="bg-grey p-4 rounded-4 fs-6 fw-bold d-flex gap-4 align-items-center">
+						<i class="fa-brands fa-reddit bg-grey-badge text-black p-1 fs-5 rounded-3"></i>
+						Social Media
+					</button>
+				</div>
+			</div>
+			<div id="two-columns" class="d-flex justify-content-between align-items-start mt-m">
+				<div id="left-section">
+					<div class="bg-card rounded-3 w-100 p-4 d-flex flex-column gap-3">
+						<h5 class="mb-2 fw-bold">New Orders</h5>
+						<div class="form-icon-group">
+							<input type="text" placeholder="example@email.com" class="form-control form-control-lg py-3 fs-6" />
+							<button class="fa-solid fa-search form-end-icon p-2 rounded-3 bg-grey-badge"></button>
+						</div>
+						<div class="form-icon-group">
+							<select class="form-select form-select-lg py-3 fs-6 form-control">
+								<option>Service EXCLUSIVE</option>
+							</select>
+							<label class="fa-solid fa-chevron-down form-end-icon p-2 form-label rounded-3 bg-grey-badge"></label>
+						</div>
+						<div class="form-icon-group">
+							<select class="form-select form-select-lg py-3 fs-6">
+								<option>1810 - Instagram Followers [Refill: 30D] [200K] [Start Time: 0 - 1 Hr] - $4.00</option>
+							</select>
+							<button class="fa-solid fa-chevron-down form-end-icon p-2 rounded-3 bg-grey-badge" style="right: 2.5rem"></button>
+							<button class="fa-solid fa-star form-end-icon p-2 rounded-3 bg-grey-badge btn-favorite text-black"></butt>
+						</div>
+						<div class="form-group">
+							<label class="form-label fw-bold" for="linkInput">Link</label>
+							<input type="text" class="form-control form-control-lg p-2" id="linkInput" placeholder="https://example.com" />
+						</div>
+						<div class="form-group form-icon-group">
+							<label class="form-label fw-bold" for="quantityInput">Quantity</label>
+							<input type="number" id="quantityInput" placeholder="50" class="form-control form-control-lg py-3 fs-6" />
+							<div class="form-end-icon p-2 rounded-3 bg-grey-badge fw-bold" style="width: 250px; top: 50%; right: 0; transform: translateX(-20px)">Min: 50 ~ Max : 200 000</div>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="check-remember" />
+							<label class="form-check-label fw-bold" for="check-remember"> Drip-feed </label>
+						</div>
+						<button class="bg-submit rounded-3 fs-5 fw-bold py-3">SUBMIT</button>
+					</div>
+				</div>
+				<div id="right-section">
+					<div class="bg-card rounded-4 p-4">
+						<div class="fs-4 m-4 fw-bold d-flex justify-content-between align-items-center">Service Details</div>
+						<div class="d-flex gap-4 flex-column rounded-bottom-4 p-4">
+							<h6>1810 - <img src="../../assets/images/banner.svg" /> Instagram Followers [MIX USA] [Refill: 30D] [200K] [Start Time: 0 - 1 Hr] [Speed: 50K/D] - $4.00</h6>
+							<div class="d-flex flex-wrap pt-4 gap-4 text-black">
+								<div class="d-flex px-4 py-3 rounded-3 flex-column gap-s align-items-center bg-grey">
+									<div class="fs-sm fw-bold">START TIME</div>
+									<h6 class="bg-grey-badge py-s px-4 rounded-pill">0 - 1 Hr</h6>
+								</div>
+								<div class="d-flex px-4 py-3 rounded-3 flex-column gap-s align-items-center bg-grey">
+									<div class="fs-sm fw-bold">SPEED</div>
+									<h6 class="bg-info py-s px-4 rounded-pill">50K/D</h6>
+								</div>
+							</div>
+							<div class="d-flex flex-wrap pb-4 gap-4 text-black">
+								<div class="d-flex px-4 py-3 rounded-3 flex-column gap-s align-items-center bg-grey">
+									<div class="fs-sm fw-bold">GUARANTEED</div>
+									<h6 class="bg-success py-s px-4 rounded-pill">0 - 1 Hr</h6>
+								</div>
+								<div class="d-flex px-4 py-3 rounded-3 flex-column gap-s align-items-center bg-grey">
+									<div class="fs-sm fw-bold">AVERAGE TIME</div>
+									<h6 class="bg-grey-badge py-s px-4 rounded-pill">12 hours 25 minutes</h6>
+								</div>
+							</div>
+							<h6 class="mb-4">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, quidem tempora ducimus quisquam eligendi ipsa delectus et autem harum blanditiis dignissimos rerum sed!
+								Fuga cumque nisi accusamus vel! Blanditiis, at.
+							</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<section id="copyright" class="fs-6 fw-bold position-fixed" style="bottom: 2rem; right: 3rem">&copy; Copyright. All Right Reserved.</section>
+		<script src="../../assets/js/popper.js"></script>
+		<script src="../../assets/js/bootstrap.min.js"></script>
+		<script src="../../assets/js/custom.js"></script>
+		<script src="../../assets/js/dashboard/color-mode.js"></script>
+		<script src="../../assets/js/dashboard/sticky-menu.js"></script>
+		<script src="../../assets/js/dashboard/buttons.js"></script>
+		<script src="../../assets/js/dashboard/popover.js"></script>
+	</body>
+</html>
