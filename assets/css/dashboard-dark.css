@@ -18,9 +18,20 @@
 
 	.bg-submit {
 		background-color: #e4fad2;
+		color: black;
 	}
 
 	#mode-switch {
 		background-color: #3f3f3f;
+	}
+
+	.form-control,
+	.form-select {
+		background-color: white !important;
+	}
+
+	.form-control::placeholder,
+	.form-select {
+		color: black;
 	}
 }

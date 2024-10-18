@@ -17,6 +17,8 @@
 $primary: #73cc67;
 $secondary: #f8f5f5;
 $light: #656565;
+$info: #4ccfff;
+$success: #d5fd92;
 
 // Typography
 $headings-margin-bottom: 0;
@@ -40,5 +42,7 @@ $spacers: (
 );
 
 // Buttons
+
+$form-select-indicator-color: transparent;
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

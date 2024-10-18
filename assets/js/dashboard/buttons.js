@@ -1,22 +1,3 @@
-// const alertCloseButtons = document.querySelectorAll(".btn-alert-close");
-// const alertDialogs = document.querySelectorAll(".alert-dlg");
-// for (const alertBtn of alertCloseButtons) {
-// 	alertBtn.addEventListener("click", function () {
-// for (const alertDialog of alertDialogs) {
-// 	if (alertDialog.contains(alertBtn)) {
-// 		alertDialog.style.maxHeight = "0px";
-// 		alertDialog.style.margin = "0px !important";
-// 		alertDialog.style.padding = "0px !important";
-// 		alertDialog.style.transform = "translateX(-40px)";
-// 		alertDialog.style.opacity = 0;
-// 		setTimeout(function () {
-// 			alertDialog.remove();
-// 		}, 1000);
-// 	}
-// }
-// 	});
-// }
-
 function alertAction() {
 	const alertCloseButtons = document.querySelectorAll(".btn-alert-close");
 	const alertDialogs = document.querySelectorAll(".alert-dlg");
@@ -28,7 +9,7 @@ function alertAction() {
 					alertDialog.style.transform = "translateX(-60px)";
 					alertDialog.style.transition = "all 0.4s ease-in-out";
 					setTimeout(() => {
-						alertDialog.style.transition = "all 1.2s ease-out";
+						alertDialog.style.transition = "all 1.2s ease-in-out";
 						alertDialog.style.padding = 0;
 						alertDialog.style.margin = 0;
 						alertDialog.style.maxHeight = 0;
@@ -39,6 +20,20 @@ function alertAction() {
 	}
 }
 
+function dropdownAction() {
+	const dropdownButtons = document.querySelectorAll(".fa-chevron-down");
+	for (const dropdownBtn of dropdownButtons) {
+		const dropdownWrapper = dropdownBtn.parentElement;
+		const dropdownSelect = dropdownWrapper.querySelector(".form-select");
+		dropdownBtn.addEventListener("click", () => {
+			console.log(dropdownSelect);
+			dropdownSelect.focus();
+			dropdownSelect.click();
+		});
+	}
+}
+
+dropdownAction();
 alertAction();
 
 // const refreshBtns = document.getElementsByClassName("btn-refresh");
@@ -77,18 +72,18 @@ alertAction();
 // 		}
 // 	});
 
-// const favouriteBtns = document.getElementsByClassName("btn-favourite");
-// for (const favouriteBtn of favouriteBtns) {
-// 	favouriteBtn.addEventListener("click", function () {
-// 		if (favouriteBtn.classList.contains("text-black")) {
-// 			favouriteBtn.classList.remove("text-black");
-// 			favouriteBtn.classList.add("text-warning");
-// 		} else {
-// 			favouriteBtn.classList.add("text-black");
-// 			favouriteBtn.classList.remove("text-warning");
-// 		}
-// 	});
-// }
+const favButtons = document.getElementsByClassName("btn-favorite");
+for (const favBtn of favButtons) {
+	favBtn.addEventListener("click", function () {
+		if (favBtn.classList.contains("text-black")) {
+			favBtn.classList.remove("text-black");
+			favBtn.classList.add("text-warning");
+		} else {
+			favBtn.classList.add("text-black");
+			favBtn.classList.remove("text-warning");
+		}
+	});
+}
 
 // const copyBtns = document.querySelectorAll(".btn-copy");
 // if (copyBtns) {

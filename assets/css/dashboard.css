@@ -33,6 +33,7 @@ button {
 
 .bg-submit {
 	background-color: black;
+	color: white;
 }
 
 .cursor-pointer {
@@ -74,23 +75,18 @@ button {
 .form-icon-group .form-end-icon {
 	position: absolute;
 	top: 50%;
-	transform: translate(50%, -65%);
+	transform: translate(-50%, -50%);
 	width: 25px;
 	height: 25px;
 	border-radius: 0.5rem;
-	background-color: white;
 	color: black;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.form-icon-group .form-end-icon:nth-child(1) {
-	right: 16px;
-}
-
-.form-icon-group .form-end-icon:nth-child(2) {
-	right: 49px;
+.form-icon-group .form-end-icon {
+	right: 0px;
 }
 
 /* Sidebar */

@@ -98,82 +98,70 @@
 							</div>
 						</div>
 					</div>
-					<div class="bg-card rounded-3 w-100 p-4 d-flex flex-column gap-2">
+					<div class="bg-card rounded-3 w-100 p-4 d-flex flex-column gap-3">
 						<h5 class="mb-2 fw-bold">New Orders</h5>
 						<div class="form-icon-group">
-							<input type="text" placeholder="example@email.com" class="form-control form-control-lg py-3 fs-6 mb-1" />
-							<i class="fa-solid fa-search form-end-icon"></i>
+							<input type="text" placeholder="example@email.com" class="form-control form-control-lg py-3 fs-6" />
+							<button class="fa-solid fa-search form-end-icon p-2 rounded-3 bg-grey-badge"></button>
 						</div>
-						<select class="form-select form-select-lg py-3 fs-6 mb-1">
-							<option>Service EXCLUSIVE</option>
-						</select>
-						<div class="d-flex gap-4 align-items-center">
+						<div class="form-icon-group">
+							<select class="form-select form-select-lg py-3 fs-6 form-control">
+								<option>Service EXCLUSIVE</option>
+							</select>
+							<label class="fa-solid fa-chevron-down form-end-icon p-2 form-label rounded-3 bg-grey-badge"></label>
+						</div>
+						<div class="form-icon-group">
 							<select class="form-select form-select-lg py-3 fs-6">
 								<option>1810 - Instagram Followers [Refill: 30D] [200K] [Start Time: 0 - 1 Hr] - $4.00</option>
 							</select>
-							<button class="btn-favourite fa-solid fa-star me-3 rounded-pill bg-primary text-black" style="width: 30px; height: 30px"></button>
+							<button class="fa-solid fa-chevron-down form-end-icon p-2 rounded-3 bg-grey-badge" style="right: 2.5rem"></button>
+							<button class="fa-solid fa-star form-end-icon p-2 rounded-3 bg-grey-badge btn-favorite text-black"></butt>
 						</div>
-						<h6 class="fw-bold">Link</h6>
-						<input type="text" placeholder="" class="form-control form-control-lg py-3 fs-6" />
-						<h6 class="fw-bold">Quantity</h6>
-						<div class="d-flex flex-column">
-							<input type="text" placeholder="" class="form-control form-control-lg py-3 fs-6" style="border-bottom-right-radius: 0" />
-							<div class="text-center ms-auto rounded-bottom-3 text-white bg-primary px-3 py-2" style="width: 30%">Min: 50 - Max: 200 000</div>
+						<div class="form-group">
+							<label class="form-label fw-bold" for="linkInput">Link</label>
+							<input type="text" class="form-control form-control-lg p-2" id="linkInput" placeholder="https://example.com" />
+						</div>
+						<div class="form-group form-icon-group">
+							<label class="form-label fw-bold" for="quantityInput">Quantity</label>
+							<input type="number" id="quantityInput" placeholder="50" class="form-control form-control-lg py-3 fs-6" />
+							<div class="form-end-icon p-2 rounded-3 bg-grey-badge fw-bold" style="width: 250px; top: 50%; right: 0; transform: translateX(-20px)">Min: 50 ~ Max : 200 000</div>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="" id="check-remember" />
 							<label class="form-check-label fw-bold" for="check-remember"> Drip-feed </label>
 						</div>
-						<button class="bg-primary text-white rounded-3 fs-5 fw-bold py-3">SUBMIT</button>
+						<button class="bg-submit rounded-3 fs-5 fw-bold py-3">SUBMIT</button>
 					</div>
 				</div>
 				<div id="right-section" class="my-auto">
-					<div class="bg-primary text-white rounded-4 order-card">
-						<div class="order-head fs-4 fw-bold p-5 rounded-top-3 d-flex justify-content-between align-items-center">Service Details</div>
-						<div class="service-card d-flex gap-4 flex-column rounded-bottom-4">
+					<div class="bg-card rounded-4 p-4">
+						<div class="fs-4 m-4 fw-bold d-flex justify-content-between align-items-center">Service Details</div>
+						<div class="d-flex gap-4 flex-column rounded-bottom-4 p-4">
 							<h6>1810 - <img src="../../assets/images/banner.svg" /> Instagram Followers [MIX USA] [Refill: 30D] [200K] [Start Time: 0 - 1 Hr] [Speed: 50K/D] - $4.00</h6>
-							<div class="row">
-								<div class="col-6 p-2">
-									<div class="d-flex ps-4 py-3 service-detail-card rounded-2 gap-3 align-items-center">
-										<i class="fa-solid fa-stopwatch fs-3 rounded-pill bg-primary p-3 text-white"></i>
-										<div>
-											<div style="font-size: 10px">START TIME</div>
-											<h6>0 - 1 Hr</h6>
-										</div>
-									</div>
+							<div class="d-flex flex-wrap pt-4 gap-4 text-black">
+								<div class="d-flex px-4 py-3 rounded-3 flex-column gap-s align-items-center bg-grey">
+									<div class="fs-sm fw-bold">START TIME</div>
+									<h6 class="bg-grey-badge py-s px-4 rounded-pill">0 - 1 Hr</h6>
 								</div>
-								<div class="col-6 p-2">
-									<div class="d-flex ps-4 py-3 service-detail-card rounded-2 gap-3 align-items-center">
-										<i class="fa-solid fa-shield fs-3 rounded-pill bg-primary p-3 text-white"></i>
-										<div>
-											<div style="font-size: 10px">GUARANTEED</div>
-											<h6>30D</h6>
-										</div>
-									</div>
-								</div>
-								<div class="col-6 p-2">
-									<div class="d-flex ps-4 py-3 service-detail-card rounded-2 gap-3 align-items-center">
-										<i class="fa-solid fa-gauge-high fs-3 rounded-pill bg-primary p-3 text-white"></i>
-										<div>
-											<div style="font-size: 10px">SPEED</div>
-											<h6>50K/D</h6>
-										</div>
-									</div>
-								</div>
-								<div class="col-6 p-2">
-									<div class="d-flex ps-4 py-3 service-detail-card rounded-2 gap-3 align-items-center">
-										<i class="fa-solid fa-truck-moving fs-3 rounded-pill bg-primary p-3 text-white"></i>
-										<div>
-											<div style="font-size: 10px">AVERAGE TIME</div>
-											<h6>12 hours 25 minutes</h6>
-										</div>
-									</div>
+								<div class="d-flex px-4 py-3 rounded-3 flex-column gap-s align-items-center bg-grey">
+									<div class="fs-sm fw-bold">SPEED</div>
+									<h6 class="bg-info py-s px-4 rounded-pill">50K/D</h6>
 								</div>
 							</div>
-							<div class="mb-4">
+							<div class="d-flex flex-wrap pb-4 gap-4 text-black">
+								<div class="d-flex px-4 py-3 rounded-3 flex-column gap-s align-items-center bg-grey">
+									<div class="fs-sm fw-bold">GUARANTEED</div>
+									<h6 class="bg-success py-s px-4 rounded-pill">0 - 1 Hr</h6>
+								</div>
+								<div class="d-flex px-4 py-3 rounded-3 flex-column gap-s align-items-center bg-grey">
+									<div class="fs-sm fw-bold">AVERAGE TIME</div>
+									<h6 class="bg-grey-badge py-s px-4 rounded-pill">12 hours 25 minutes</h6>
+								</div>
+							</div>
+							<h6 class="mb-4">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, quidem tempora ducimus quisquam eligendi ipsa delectus et autem harum blanditiis dignissimos rerum sed!
 								Fuga cumque nisi accusamus vel! Blanditiis, at.
-							</div>
+							</h6>
 						</div>
 					</div>
 				</div>
