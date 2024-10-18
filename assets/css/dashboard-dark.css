@@ -15,4 +15,8 @@
 	.bg-alert {
 		background-color: black;
 	}
+
+	#mode-switch {
+		background-color: #3f3f3f;
+	}
 }

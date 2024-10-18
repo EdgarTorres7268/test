@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css" />
 		<title>Panel 1</title>
 	</head>
+	<!-- sidebar is 130px wide -->
 	<body class="bg-mode">
 		<div id="sidebar" class="bg-main py-3 px-5 d-flex align-items-center flex-column position-fixed vh-100">
 			<button class="fa-solid fa-ellipsis fs-1 mb-3"></button>
@@ -41,6 +42,11 @@
 					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">$524,158</div>
 				</div>
 			</div>
+		</div>
+		<div id="mode-switch-wrapper" class="rounded-pill bg-grey border text-black">
+			<i class="fa-regular fa-sun fs-4 p-1" style="width: 3rem"></i>
+			<i class="fa-solid fa-moon fs-4 p-1" style="width: 3rem"></i>
+			<button id="mode-switch" class="position-absolute"></button>
 		</div>
 		<script src="../../assets/js/popper.js"></script>
 		<script src="../../assets/js/bootstrap.min.js"></script>
