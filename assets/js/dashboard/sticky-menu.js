@@ -1,5 +1,5 @@
 // Dropdown
-const updateDropdown = (bodyElem) => {
+const updateDropdown = (bodyElem, wrapper) => {
 	if (bodyElem.classList.contains("active")) {
 		bodyElem.style.maxHeight = bodyElem.scrollHeight + "px";
 		bodyElem.style.opacity = 1;
@@ -18,6 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	dropdownHeader.addEventListener("click", () => {
 		dropdownBody.classList.toggle("active");
 		dropdown.classList.toggle("bg-card");
-		updateDropdown(dropdownBody);
+		updateDropdown(dropdownBody, dropdown);
 	});
 });

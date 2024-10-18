@@ -16,7 +16,7 @@ button {
 }
 
 .bg-card {
-	background-color: #323232;
+	background-color: white;
 }
 
 .bg-alert {
@@ -33,6 +33,10 @@ button {
 
 .cursor-pointer {
 	cursor: pointer !important;
+}
+
+.menu {
+	transition: background-color 0.2s ease-in-out;
 }
 
 .menu-body {
