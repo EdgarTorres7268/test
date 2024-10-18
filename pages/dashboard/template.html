@@ -11,7 +11,7 @@
 	</head>
 	<!-- sidebar is 130px wide -->
 	<body class="bg-mode">
-		<div id="sidebar" class="bg-main py-3 px-5 d-flex align-items-center flex-column position-fixed vh-100">
+		<section id="sidebar" class="bg-main py-3 px-5 d-flex align-items-center flex-column position-fixed vh-100">
 			<button class="fa-solid fa-ellipsis fs-1 mb-3"></button>
 			<button class="fa-solid fa-globe fs-1"></button>
 			<div style="margin-top: 85px" class="d-flex flex-column gap-3">
@@ -26,8 +26,8 @@
 				<button class="fa-solid fa-user-gear fs-4"></button>
 				<button class="fa-solid fa-right-from-bracket fs-4"></button>
 			</div>
-		</div>
-		<div id="sticky-menu" class="p-4 rounded-4 menu" style="transition: all 0.2s ease-in-out">
+		</section>
+		<section id="sticky-menu" class="p-4 rounded-4 menu" style="transition: all 0.2s ease-in-out">
 			<div class="menu-header cursor-pointer d-flex gap-2 align-items-center">
 				<h5>Hello, username!</h5>
 				<button class="fa-regular fa-eye fs-4 fw-bold"></button>
@@ -42,16 +42,20 @@
 					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">$524,158</div>
 				</div>
 			</div>
-		</div>
-		<div id="mode-switch-wrapper" class="rounded-pill bg-grey border text-black">
+		</section>
+		<section id="mode-switch-wrapper" class="rounded-pill bg-grey border text-black">
 			<i class="fa-regular fa-sun fs-4 p-1" style="width: 3rem"></i>
 			<i class="fa-solid fa-moon fs-4 p-1" style="width: 3rem"></i>
 			<button id="mode-switch" class="position-absolute"></button>
-		</div>
+		</section>
+		<main id="main" style="padding-top: 160px; padding-left: 140px"></main>
+		<section id="copyright" class="fs-6 fw-bold position-fixed" style="bottom: 2rem; right: 3rem">&copy; Copyright. All Right Reserved.</section>
 		<script src="../../assets/js/popper.js"></script>
 		<script src="../../assets/js/bootstrap.min.js"></script>
 		<script src="../../assets/js/custom.js"></script>
 		<script src="../../assets/js/dashboard/color-mode.js"></script>
 		<script src="../../assets/js/dashboard/sticky-menu.js"></script>
+		<script src="../../assets/js/dashboard/buttons.js"></script>
+		<script src="../../assets/js/dashboard/popover.js"></script>
 	</body>
 </html>
