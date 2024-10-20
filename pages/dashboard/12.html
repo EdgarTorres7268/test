@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/dashboard.css" />
+		<link rel="stylesheet" href="../../assets/css/dashboard-dark.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css" />
+		<title>Panel 1</title>
+	</head>
+	<!-- sidebar is 130px wide -->
+	<body class="bg-mode">
+		<section id="sidebar" class="bg-main py-3 px-5 d-flex align-items-center flex-column position-fixed vh-100">
+			<button class="fa-solid fa-ellipsis fs-1 mb-3"></button>
+			<button class="fa-solid fa-globe fs-1"></button>
+			<div style="margin-top: 85px" class="d-flex flex-column gap-3">
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu active"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+			</div>
+			<div class="mt-auto mb-4 d-flex gap-4 flex-column justify-content-center align-items-center">
+				<button class="fa-solid fa-user-gear fs-4"></button>
+				<button class="fa-solid fa-right-from-bracket fs-4"></button>
+			</div>
+		</section>
+		<section id="sticky-menu" class="p-4 rounded-4 menu" style="transition: all 0.2s ease-in-out">
+			<div class="menu-header cursor-pointer d-flex gap-2 align-items-center">
+				<h5>Hello, username!</h5>
+				<button class="fa-regular fa-eye fs-4 fw-bold"></button>
+			</div>
+			<div class="menu-body px-1 d-flex flex-column gap-2 py-4 overflow-hidden text-black">
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Total Orders</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">119,354</div>
+				</div>
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Current Balance</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">$524,158</div>
+				</div>
+			</div>
+		</section>
+		<section id="mode-switch-wrapper" class="rounded-pill bg-grey border text-black">
+			<i class="fa-regular fa-sun fs-4 p-1" style="width: 3rem"></i>
+			<i class="fa-solid fa-moon fs-4 p-1" style="width: 3rem"></i>
+			<button id="mode-switch" class="position-absolute"></button>
+		</section>
+		<main id="main" style="padding-top: 160px; padding-left: 140px">
+			<div class="d-flex gap-6 mx-auto my-6" style="max-width: 1528px">
+				<div class="d-flex flex-column gap-m w-100">
+					<div class="bg-card rounded-3 p-m d-flex flex-column gap-2">
+						<div class="form-icon-group">
+							<input type="text" placeholder="Username" class="form-control form-control-lg py-3 fs-6" />
+							<button class="fa-solid fa-user form-end-icon p-2 rounded-3 bg-grey-badge"></button>
+						</div>
+						<div class="form-icon-group">
+							<input type="text" placeholder="Email" class="form-control form-control-lg py-3 fs-6" />
+							<button class="fa-solid fa-envelope form-end-icon p-2 rounded-3 bg-grey-badge"></button>
+						</div>
+						<button class="bg-submit rounded-3 fs-5 fw-bold py-3 my-4">CHANGE EMAIL</button>
+					</div>
+					<div class="bg-card rounded-3 p-m d-flex flex-column gap-2">
+						<div class="form-icon-group">
+							<input type="text" placeholder="Current Password" class="form-control form-control-lg py-3 fs-6" />
+							<button class="fa-solid fa-lock-open form-end-icon p-2 rounded-3 bg-grey-badge"></button>
+						</div>
+						<div class="form-icon-group">
+							<input type="text" placeholder="New Password" class="form-control form-control-lg py-3 fs-6" />
+							<button class="fa-solid fa-key form-end-icon p-2 rounded-3 bg-grey-badge"></button>
+						</div>
+						<div class="form-icon-group">
+							<input type="text" placeholder="Confirm new Password" class="form-control form-control-lg py-3 fs-6" />
+							<button class="fa-solid fa-key form-end-icon p-2 rounded-3 bg-grey-badge"></button>
+						</div>
+						<button class="bg-submit rounded-3 fs-5 fw-bold py-3 my-4">CHANGE PASSWORD</button>
+					</div>
+					<div class="bg-card rounded-3 p-m d-flex flex-column gap-2">
+						<div class="px-3 row pt-3 fw-bold fs-5">
+							<div class="col-6">Notification</div>
+							<div class="col-3">Email</div>
+							<div class="col-3">Telegram</div>
+						</div>
+						<div class="px-3 row pt-3 fw-bold fs-6">
+							<div class="col-6">API Key Changed</div>
+							<div class="col-3">
+								<div class="form-check form-switch fs-4">
+									<input class="form-check-input" type="checkbox" role="switch" />
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="form-check form-switch fs-4">
+									<input class="form-check-input" type="checkbox" role="switch" checked />
+								</div>
+							</div>
+						</div>
+						<div class="px-3 row pt-3 fw-bold fs-6">
+							<div class="col-6">New Message</div>
+							<div class="col-3">
+								<div class="form-check form-switch fs-4">
+									<input class="form-check-input" type="checkbox" role="switch" checked />
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="form-check form-switch fs-4">
+									<input class="form-check-input" type="checkbox" role="switch" />
+								</div>
+							</div>
+						</div>
+						<div class="px-3 row pt-3 fw-bold fs-6">
+							<div class="col-6 fs-5">Telegram Notification</div>
+							<div class="col-6">
+								<div class="w-100 bg-primary rounded-3 py-2 text-white text-center">Connected</div>
+							</div>
+						</div>
+						<button class="bg-submit rounded-3 fs-5 fw-bold py-3 my-4">SAVE CHANGE</button>
+					</div>
+				</div>
+				<div class="d-flex flex-column gap-m w-100">
+					<div class="bg-card rounded-3 p-m d-flex flex-column gap-2">
+						<div class="form-icon-group">
+							<select class="form-select form-select-lg py-3 fs-6 form-control">
+								<option>Language</option>
+							</select>
+							<label class="fa-solid fa-language form-end-icon p-2 form-label rounded-3 bg-grey-badge"></label>
+						</div>
+						<div class="form-icon-group">
+							<select class="form-select form-select-lg py-3 fs-6 form-control">
+								<option>TimeZone</option>
+							</select>
+							<label class="fa-solid fa-globe form-end-icon p-2 form-label rounded-3 bg-grey-badge"></label>
+						</div>
+						<button class="bg-submit rounded-3 fs-5 fw-bold py-3 my-4">SAVE</button>
+					</div>
+					<div class="bg-card rounded-3 p-m d-flex flex-column gap-2">
+						<div class="form-icon-group">
+							<input type="text" placeholder="Two factor authentication" class="form-control form-control-lg py-3 fs-6" />
+							<button class="form-end-icon p-2 rounded-3 bg-black text-white" style="width: 160px; right: -60px">Enable</button>
+						</div>
+						<div class="form-icon-group">
+							<input type="text" placeholder="API key" class="form-control form-control-lg py-3 fs-6" />
+							<button class="form-end-icon p-2 rounded-3 bg-black text-white" style="width: 160px; right: -60px">Generate New</button>
+						</div>
+						<button class="bg-submit rounded-3 fs-5 fw-bold py-3 my-4">SAVE</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<section id="copyright" class="fs-6 fw-bold position-fixed" style="bottom: 2rem; right: 3rem">&copy; Copyright. All Right Reserved.</section>
+		<script src="../../assets/js/popper.js"></script>
+		<script src="../../assets/js/bootstrap.min.js"></script>
+		<script src="../../assets/js/custom.js"></script>
+		<script src="../../assets/js/dashboard/color-mode.js"></script>
+		<script src="../../assets/js/dashboard/sticky-menu.js"></script>
+		<script src="../../assets/js/dashboard/buttons.js"></script>
+		<script src="../../assets/js/dashboard/popover.js"></script>
+	</body>
+</html>
