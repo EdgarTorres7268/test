@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/dashboard.css" />
+		<link rel="stylesheet" href="../../assets/css/dashboard-dark.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<link rel="stylesheet" href="../../assets/css/front.css" />
+		<link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css" />
+		<title>Panel 1</title>
+	</head>
+	<!-- sidebar is 130px wide -->
+	<body class="bg-mode">
+		<section id="sidebar" class="bg-main py-3 px-5 d-flex align-items-center flex-column position-fixed vh-100">
+			<button class="fa-solid fa-ellipsis fs-1 mb-3"></button>
+			<button class="fa-solid fa-globe fs-1"></button>
+			<div style="margin-top: 85px" class="d-flex flex-column gap-3">
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu active"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+			</div>
+			<div class="mt-auto mb-4 d-flex gap-4 flex-column justify-content-center align-items-center">
+				<button class="fa-solid fa-user-gear fs-4"></button>
+				<button class="fa-solid fa-right-from-bracket fs-4"></button>
+			</div>
+		</section>
+		<section id="sticky-menu" class="p-4 rounded-4 menu" style="transition: all 0.2s ease-in-out">
+			<div class="menu-header cursor-pointer d-flex gap-2 align-items-center">
+				<h5>Hello, username!</h5>
+				<button class="fa-regular fa-eye fs-4 fw-bold"></button>
+			</div>
+			<div class="menu-body px-1 d-flex flex-column gap-2 py-4 overflow-hidden text-black">
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Total Orders</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">119,354</div>
+				</div>
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Current Balance</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">$524,158</div>
+				</div>
+			</div>
+		</section>
+		<section id="mode-switch-wrapper" class="rounded-pill bg-grey border text-black">
+			<i class="fa-regular fa-sun fs-4 p-1" style="width: 3rem"></i>
+			<i class="fa-solid fa-moon fs-4 p-1" style="width: 3rem"></i>
+			<button id="mode-switch" class="position-absolute"></button>
+		</section>
+		<main id="main" style="padding-top: 160px; padding-left: 140px" class="mx-auto">
+			<section id="faq" class="mb-6 bg-transparent">
+				<h1 class="text-center fw-bolder py-6">Frequently Asked Questions</h1>
+				<div class="d-flex flex-column gap-2 mx-auto" style="max-width: 1060px">
+					<div class="px-5 py-4 card cursor-pointer anim anim-scroll-right anim-scroll-opacity dropdown-container bg-white text-black">
+						<div class="d-flex align-items-center" style="gap: 40px">
+							<div class="rounded-2 bg-secondary d-flex flex-column sx-child overflow-hidden dropdown-icons text-black">
+								<i class="p-1 fa-solid fa-circle-question fs-4 anim-lg"></i>
+								<i class="p-1 fa-solid fa-comment-dots fs-4 anim-lg"></i>
+							</div>
+							<h6 class="fw-bolder">Lorem ipsum dolor sit amet.</h6>
+						</div>
+						<div class="fw-semibold anim anim-opacity dropdown-body" style="padding-left: 5.5rem">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae nemo eaque, itaque reprehenderit ratione at perferendis minima quam molestias repudiandae ex, porro officia
+							rem ad! Quis officiis id suscipit magni harum eos nulla iusto culpa!
+						</div>
+					</div>
+					<div class="px-5 py-4 card cursor-pointer anim anim-scroll-right anim-scroll-opacity dropdown-container bg-white text-black">
+						<div class="d-flex align-items-center" style="gap: 40px">
+							<div class="rounded-2 bg-secondary d-flex flex-column sx-child overflow-hidden dropdown-icons text-black">
+								<i class="p-1 fa-solid fa-circle-question fs-4 anim-lg"></i>
+								<i class="p-1 fa-solid fa-comment-dots fs-4 anim-lg"></i>
+							</div>
+							<h6 class="fw-bolder">Lorem ipsum dolor sit amet.</h6>
+						</div>
+						<div class="fw-semibold anim anim-opacity dropdown-body" style="padding-left: 5.5rem">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae nemo eaque, itaque reprehenderit ratione at perferendis minima quam molestias repudiandae ex, porro officia
+							rem ad! Quis officiis id suscipit magni harum eos nulla iusto culpa!
+						</div>
+					</div>
+					<div class="px-5 py-4 card cursor-pointer anim anim-scroll-right anim-scroll-opacity dropdown-container bg-white text-black">
+						<div class="d-flex align-items-center" style="gap: 40px">
+							<div class="rounded-2 bg-secondary d-flex flex-column sx-child overflow-hidden dropdown-icons text-black">
+								<i class="p-1 fa-solid fa-circle-question fs-4 anim-lg"></i>
+								<i class="p-1 fa-solid fa-comment-dots fs-4 anim-lg"></i>
+							</div>
+							<h6 class="fw-bolder">Lorem ipsum dolor sit amet.</h6>
+						</div>
+						<div class="fw-semibold anim anim-opacity dropdown-body" style="padding-left: 5.5rem">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae nemo eaque, itaque reprehenderit ratione at perferendis minima quam molestias repudiandae ex, porro officia
+							rem ad! Quis officiis id suscipit magni harum eos nulla iusto culpa!
+						</div>
+					</div>
+					<div class="px-5 py-4 card cursor-pointer anim anim-scroll-right anim-scroll-opacity dropdown-container bg-white text-black">
+						<div class="d-flex align-items-center" style="gap: 40px">
+							<div class="rounded-2 bg-secondary d-flex flex-column sx-child overflow-hidden dropdown-icons text-black">
+								<i class="p-1 fa-solid fa-circle-question fs-4 anim-lg"></i>
+								<i class="p-1 fa-solid fa-comment-dots fs-4 anim-lg"></i>
+							</div>
+							<h6 class="fw-bolder">Lorem ipsum dolor sit amet.</h6>
+						</div>
+						<div class="fw-semibold anim anim-opacity dropdown-body" style="padding-left: 5.5rem">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae nemo eaque, itaque reprehenderit ratione at perferendis minima quam molestias repudiandae ex, porro officia
+							rem ad! Quis officiis id suscipit magni harum eos nulla iusto culpa!
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<section id="copyright" class="fs-6 fw-bold position-fixed" style="bottom: 2rem; right: 3rem">&copy; Copyright. All Right Reserved.</section>
+		<script src="../../assets/js/popper.js"></script>
+		<script src="../../assets/js/bootstrap.min.js"></script>
+		<script src="../../assets/js/custom.js"></script>
+		<script src="../../assets/js/dashboard/color-mode.js"></script>
+		<script src="../../assets/js/dashboard/sticky-menu.js"></script>
+		<script src="../../assets/js/dashboard/buttons.js"></script>
+		<script src="../../assets/js/front/anim.js"></script>
+	</body>
+</html>
