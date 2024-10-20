@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/dashboard.css" />
+		<link rel="stylesheet" href="../../assets/css/dashboard-dark.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css" />
+		<title>Panel 1</title>
+	</head>
+	<!-- sidebar is 130px wide -->
+	<body class="bg-mode">
+		<section id="sidebar" class="bg-main py-3 px-5 d-flex align-items-center flex-column position-fixed vh-100">
+			<button class="fa-solid fa-ellipsis fs-1 mb-3"></button>
+			<button class="fa-solid fa-globe fs-1"></button>
+			<div style="margin-top: 85px" class="d-flex flex-column gap-3">
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu active"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+			</div>
+			<div class="mt-auto mb-4 d-flex gap-4 flex-column justify-content-center align-items-center">
+				<button class="fa-solid fa-user-gear fs-4"></button>
+				<button class="fa-solid fa-right-from-bracket fs-4"></button>
+			</div>
+		</section>
+		<section id="sticky-menu" class="p-4 rounded-4 menu" style="transition: all 0.2s ease-in-out">
+			<div class="menu-header cursor-pointer d-flex gap-2 align-items-center">
+				<h5>Hello, username!</h5>
+				<button class="fa-regular fa-eye fs-4 fw-bold"></button>
+			</div>
+			<div class="menu-body px-1 d-flex flex-column gap-2 py-4 overflow-hidden text-black">
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Total Orders</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">119,354</div>
+				</div>
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Current Balance</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">$524,158</div>
+				</div>
+			</div>
+		</section>
+		<section id="mode-switch-wrapper" class="rounded-pill bg-grey border text-black">
+			<i class="fa-regular fa-sun fs-4 p-1" style="width: 3rem"></i>
+			<i class="fa-solid fa-moon fs-4 p-1" style="width: 3rem"></i>
+			<button id="mode-switch" class="position-absolute"></button>
+		</section>
+		<main id="main" style="padding-top: 160px; padding-left: 140px" class="d-flex">
+			<div class="d-flex justify-content-between align-items-start mx-auto gap-m">
+				<div style="width: 738px" class="d-flex flex-column">
+					<div class="bg-card rounded-3 w-100 p-4 d-flex flex-column gap-3">
+						<h5 class="mb-4 fw-bold">Referral link</h5>
+						<div class="d-flex flex-column gap-4 px-2">
+							<div class="form-icon-group text-black">
+								<input type="text" class="form-control form-control-lg py-3 text-black" value="https://demo.perfectpanel.com/ref/fkqn0" id="copy-text" />
+								<button type="button" class="btn-copy form-end-icon" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Link copied">
+									<img src="../../assets/fontawesome/svgs/solid/copy.svg" width="16px" height="16px" />
+								</button>
+							</div>
+							<div class="d-flex gap-4 text-black">
+								<div class="bg-grey py-3 px-4 d-flex align-items-center flex-column rounded-2 w-50 gap-1">
+									<h6>Commission Rate</h6>
+									<h6 class="px-6 bg-grey-badge rounded-3 py-s">5%</h6>
+								</div>
+								<div class="bg-grey py-3 px-4 d-flex align-items-center flex-column rounded-2 w-50 gap-1">
+									<h6>Minimum Payout</h6>
+									<h6 class="px-6 bg-grey-badge rounded-3 py-s">$100.00</h6>
+								</div>
+							</div>
+							<h6>
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse illo quo at, distinctio quos omnis illum obcaecati doloribus ab exercitationem maxime nihil reprehenderit
+								iusto enim nam molestiae numquam laborum, magnam fuga quidem quibusdam eveniet sed.
+							</h6>
+						</div>
+					</div>
+				</div>
+				<div style="width: 1030px" class="bg-card px-4 py-5 rounded-3">
+					<table class="table">
+						<thead class="text-white fw-semibold fs-6">
+							<tr>
+								<th style="width: 17%" class="ps-4">Registrations</th>
+								<th style="width: 17%" class="text-center">Referrals</th>
+								<th style="width: 20%" class="text-center">Conversion rate</th>
+								<th style="width: 18%" class="text-center">Total earnings</th>
+								<th style="width: 28%" class="text-center">Available earnings</th>
+							</tr>
+						</thead>
+						<tbody class="text-black fw-bold fs-6">
+							<tr>
+								<td class="ps-4">500</td>
+								<td class="text-center">500</td>
+								<td class="text-center">0.00%</td>
+								<td class="text-center">$10.00</td>
+								<td><div class="text-white rounded-2 bg-primary px-6 py-s mx-auto" style="width: fit-content">$0.00</div></td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table">
+						<thead class="text-white fw-semibold fs-6">
+							<tr>
+								<th style="width: 26%" class="ps-4">Payout data</th>
+								<th style="width: 37%" class="text-center">Payout amount</th>
+								<th style="width: 37%" class="text-center">Payout status</th>
+							</tr>
+						</thead>
+						<tbody class="text-black fw-bold fs-6" id="data-table" data-per-page="2">
+							<tr>
+								<td class="ps-4">2024-09-04<br />17:54:28</td>
+								<td class="text-center">$10.00</td>
+								<td><div class="text-white rounded-2 bg-primary px-5 py-1 mx-auto" style="width: fit-content">$0.00</div></td>
+							</tr>
+							<tr>
+								<td class="ps-4">2024-09-04<br />17:54:28</td>
+								<td class="text-center">$10.00</td>
+								<td><div class="text-white rounded-2 bg-primary px-5 py-1 mx-auto" style="width: fit-content">$0.00</div></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="d-flex gap-3 mb-3">
+						<button class="ms-auto fa-solid fa-chevron-left text-black fs-6 bg-white rounded-3 py-1 px-2" id="btn-pagination-prev"></button>
+						<input type="text" value="1" class="text-center bg-white rounded-3 text-black" style="max-width: 3rem" id="input-pagination" />
+						<button class="fa-solid fa-chevron-right text-black fs-6 bg-white rounded-3 py-1 px-2" id="btn-pagination-next"></button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<section id="copyright" class="fs-6 fw-bold position-fixed" style="bottom: 2rem; right: 3rem">&copy; Copyright. All Right Reserved.</section>
+		<script src="../../assets/js/popper.js"></script>
+		<script src="../../assets/js/bootstrap.min.js"></script>
+		<script src="../../assets/js/custom.js"></script>
+		<script src="../../assets/js/dashboard/color-mode.js"></script>
+		<script src="../../assets/js/dashboard/sticky-menu.js"></script>
+		<script src="../../assets/js/dashboard/buttons.js"></script>
+		<script src="../../assets/js/dashboard/popover.js"></script>
+	</body>
+</html>
