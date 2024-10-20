@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<link rel="stylesheet" href="../../assets/css/dashboard.css" />
+		<link rel="stylesheet" href="../../assets/css/dashboard-dark.css" />
+		<link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css" />
+		<title>Panel 1</title>
+	</head>
+	<!-- sidebar is 130px wide -->
+	<body class="bg-mode">
+		<section id="sidebar" class="bg-main py-3 px-5 d-flex align-items-center flex-column position-fixed vh-100">
+			<button class="fa-solid fa-ellipsis fs-1 mb-3"></button>
+			<button class="fa-solid fa-globe fs-1"></button>
+			<div style="margin-top: 85px" class="d-flex flex-column gap-3">
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu active"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+			</div>
+			<div class="mt-auto mb-4 d-flex gap-4 flex-column justify-content-center align-items-center">
+				<button class="fa-solid fa-user-gear fs-4"></button>
+				<button class="fa-solid fa-right-from-bracket fs-4"></button>
+			</div>
+		</section>
+		<section id="sticky-menu" class="p-4 rounded-4 menu" style="transition: all 0.2s ease-in-out; z-index: 9999">
+			<div class="menu-header cursor-pointer d-flex gap-2 align-items-center">
+				<h5>Hello, username!</h5>
+				<button class="fa-regular fa-eye fs-4 fw-bold"></button>
+			</div>
+			<div class="menu-body px-1 d-flex flex-column gap-2 py-4 overflow-hidden text-black">
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Total Orders</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">119,354</div>
+				</div>
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Current Balance</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">$524,158</div>
+				</div>
+			</div>
+		</section>
+		<section id="mode-switch-wrapper" class="rounded-pill bg-grey border text-black">
+			<i class="fa-regular fa-sun fs-4 p-1" style="width: 3rem"></i>
+			<i class="fa-solid fa-moon fs-4 p-1" style="width: 3rem"></i>
+			<button id="mode-switch" class="position-absolute"></button>
+		</section>
+		<main id="main" style="padding-top: 140px; padding-left: 130px">
+			<div class="bg-card rounded-4 p-m mx-l">
+				<div class="mb-3 d-flex justify-content-between align-items-center me-3">
+					<div class="form-icon-group">
+						<input type="name" placeholder="keyword" style="width: 500px" class="form-control form-control-lg" />
+						<button class="fa-solid fa-search form-end-icon bg-grey-badge p-2"></button>
+					</div>
+					<div class="position-relative" style="text-transform: none">
+						<button class="fa-solid fa-sliders fs-5 btn-filter"></button>
+						<div class="position-absolute bg-white rounded-3 d-flex flex-column gap-3 fs-5 text-black" style="right: 0; top: 3rem; width: 290px" id="filter-menu">
+							<div class="form-check" style="width: fit-content">
+								<input class="form-check-input" type="checkbox" value="" id="allstatus" />
+								<label class="form-check-label ms-2 fw-semibold" for="allstatus"> All Status </label>
+							</div>
+							<div class="form-check" style="width: fit-content">
+								<input class="form-check-input" type="checkbox" value="" id="pending" />
+								<label class="form-check-label ms-2 fw-semibold" for="pending"> Pending </label>
+							</div>
+							<div class="form-check" style="width: fit-content">
+								<input class="form-check-input" type="checkbox" value="" id="inprogress" />
+								<label class="form-check-label ms-2 fw-semibold" for="inprogress"> In Progress </label>
+							</div>
+							<div class="form-check" style="width: fit-content">
+								<input class="form-check-input" type="checkbox" value="" id="completed" />
+								<label class="form-check-label ms-2 fw-semibold" for="completed"> Completed </label>
+							</div>
+							<div class="form-check" style="width: fit-content">
+								<input class="form-check-input" type="checkbox" value="" id="partial" />
+								<label class="form-check-label ms-2 fw-semibold" for="partial"> Partial </label>
+							</div>
+							<div class="form-check" style="width: fit-content">
+								<input class="form-check-input" type="checkbox" value="" id="processing" />
+								<label class="form-check-label ms-2 fw-semibold" for="processing"> Processing </label>
+							</div>
+							<div class="form-check" style="width: fit-content">
+								<input class="form-check-input" type="checkbox" value="" id="canceled" />
+								<label class="form-check-label ms-2 fw-semibold" for="canceled"> Canceled </label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<table class="table">
+					<thead class="text-white fw-semibold fs-6">
+						<tr>
+							<th style="width: 14%">ID</th>
+							<th style="width: 14%">Date</th>
+							<th style="width: 14%">Link</th>
+							<th style="width: 40%">Service</th>
+							<th style="width: 18%" class="text-center">Status</th>
+						</tr>
+					</thead>
+					<tbody class="text-black fw-semibold fs-6" data-per-page="4">
+						<tr>
+							<td>
+								<div class="d-flex gap-2 align-items-center">
+									754953246
+									<button
+										type="button"
+										class="input-icon input-end-icon btn-copy d-flex"
+										data-bs-container="body"
+										data-bs-toggle="popover"
+										data-bs-placement="top"
+										data-bs-content="ID copied"
+									>
+										<img src="../../assets/fontawesome/svgs/solid/copy.svg" width="20px" height="20px" />
+									</button>
+								</div>
+							</td>
+							<td>2024-09-15<br />16:33:38</td>
+							<td>https://domain.com</td>
+							<td>1810 - <img src="../../assets/images/banner.svg" /> Instagram Followers [MIX USA] [Refill: 30D] [Speed: 50K/D] - $4.00</td>
+							<td class="text-center">
+								<button class="rounded-2 bg-info px-3 py-1 mx-auto text-black" style="width: 60%">In Progress - 90%</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="d-flex gap-2 align-items-center">
+									457623549
+									<button
+										type="button"
+										class="input-icon input-end-icon btn-copy d-flex"
+										data-bs-container="body"
+										data-bs-toggle="popover"
+										data-bs-placement="top"
+										data-bs-content="ID copied"
+									>
+										<img src="../../assets/fontawesome/svgs/solid/copy.svg" width="20px" height="20px" />
+									</button>
+								</div>
+							</td>
+							<td>2024-09-15<br />16:33:38</td>
+							<td>https://domain.com</td>
+							<td>1810 - <img src="../../assets/images/banner.svg" /> Instagram Followers [MIX USA] [Refill: 30D] [Speed: 50K/D] - $4.00</td>
+							<td class="text-center">
+								<button class="rounded-2 bg-success px-3 py-1 mx-auto text-black" style="width: 60%">Completed</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="d-flex gap-2 align-items-center">
+									754953246
+									<button
+										type="button"
+										class="input-icon input-end-icon btn-copy d-flex"
+										data-bs-container="body"
+										data-bs-toggle="popover"
+										data-bs-placement="top"
+										data-bs-content="ID copied"
+									>
+										<img src="../../assets/fontawesome/svgs/solid/copy.svg" width="20px" height="20px" />
+									</button>
+								</div>
+							</td>
+							<td>2024-09-15<br />16:33:38</td>
+							<td>https://domain.com</td>
+							<td>1810 - <img src="../../assets/images/banner.svg" /> Instagram Followers [MIX USA] [Refill: 30D] [Speed: 50K/D] - $4.00</td>
+							<td class="text-center">
+								<button class="rounded-2 bg-info px-3 py-1 mx-auto text-black" style="width: 60%">In Progress - 90%</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="d-flex gap-2 align-items-center">
+									457623549
+									<button
+										type="button"
+										class="input-icon input-end-icon btn-copy d-flex"
+										data-bs-container="body"
+										data-bs-toggle="popover"
+										data-bs-placement="top"
+										data-bs-content="ID copied"
+									>
+										<img src="../../assets/fontawesome/svgs/solid/copy.svg" width="20px" height="20px" />
+									</button>
+								</div>
+							</td>
+							<td>2024-09-15<br />16:33:38</td>
+							<td>https://domain.com</td>
+							<td>1810 - <img src="../../assets/images/banner.svg" /> Instagram Followers [MIX USA] [Refill: 30D] [Speed: 50K/D] - $4.00</td>
+							<td class="text-center">
+								<button class="rounded-2 bg-success px-3 py-1 mx-auto text-black" style="width: 60%">Completed</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="d-flex gap-2 align-items-center">
+									754953246
+									<button
+										type="button"
+										class="input-icon input-end-icon btn-copy d-flex"
+										data-bs-container="body"
+										data-bs-toggle="popover"
+										data-bs-placement="top"
+										data-bs-content="ID copied"
+									>
+										<img src="../../assets/fontawesome/svgs/solid/copy.svg" width="20px" height="20px" />
+									</button>
+								</div>
+							</td>
+							<td>2024-09-15<br />16:33:38</td>
+							<td>https://domain.com</td>
+							<td>1810 - <img src="../../assets/images/banner.svg" /> Instagram Followers [MIX USA] [Refill: 30D] [Speed: 50K/D] - $4.00</td>
+							<td class="text-center">
+								<button class="rounded-2 bg-info px-3 py-1 mx-auto text-black" style="width: 60%">In Progress - 90%</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="d-flex gap-2 align-items-center">
+									457623549
+									<button
+										type="button"
+										class="input-icon input-end-icon btn-copy d-flex"
+										data-bs-container="body"
+										data-bs-toggle="popover"
+										data-bs-placement="top"
+										data-bs-content="ID copied"
+									>
+										<img src="../../assets/fontawesome/svgs/solid/copy.svg" width="20px" height="20px" />
+									</button>
+								</div>
+							</td>
+							<td>2024-09-15<br />16:33:38</td>
+							<td>https://domain.com</td>
+							<td>1810 - <img src="../../assets/images/banner.svg" /> Instagram Followers [MIX USA] [Refill: 30D] [Speed: 50K/D] - $4.00</td>
+							<td class="text-center">
+								<button class="rounded-2 bg-success px-3 py-1 mx-auto text-black" style="width: 60%">Completed</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="d-flex gap-3 mb-3">
+					<button class="fa-solid fa-chevron-left text-black fs-6 bg-white rounded-3 py-1 px-2" id="btn-pagination-prev"></button>
+					<input type="text" value="1" class="text-center bg-white rounded-3 text-black" style="max-width: 3rem" id="input-pagination" />
+					<button class="fa-solid fa-chevron-right text-black fs-6 bg-white rounded-3 py-1 px-2" id="btn-pagination-next"></button>
+				</div>
+			</div>
+		</main>
+		<section id="copyright" class="fs-6 fw-bold position-fixed" style="bottom: 2rem; right: 3rem">&copy; Copyright. All Right Reserved.</section>
+		<script src="../../assets/js/popper.js"></script>
+		<script src="../../assets/js/bootstrap.min.js"></script>
+		<script src="../../assets/js/custom.js"></script>
+		<script src="../../assets/js/dashboard/color-mode.js"></script>
+		<script src="../../assets/js/dashboard/sticky-menu.js"></script>
+		<script src="../../assets/js/dashboard/buttons.js"></script>
+		<script src="../../assets/js/dashboard/popover.js"></script>
+	</body>
+</html>
