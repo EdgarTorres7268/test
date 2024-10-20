@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/dashboard.css" />
+		<link rel="stylesheet" href="../../assets/css/dashboard-dark.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css" />
+		<title>Panel 1</title>
+	</head>
+	<!-- sidebar is 130px wide -->
+	<body class="bg-mode">
+		<section id="sidebar" class="bg-main py-3 px-5 d-flex align-items-center flex-column position-fixed vh-100">
+			<button class="fa-solid fa-ellipsis fs-1 mb-3"></button>
+			<button class="fa-solid fa-globe fs-1"></button>
+			<div style="margin-top: 85px" class="d-flex flex-column gap-3">
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu active"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+			</div>
+			<div class="mt-auto mb-4 d-flex gap-4 flex-column justify-content-center align-items-center">
+				<button class="fa-solid fa-user-gear fs-4"></button>
+				<button class="fa-solid fa-right-from-bracket fs-4"></button>
+			</div>
+		</section>
+		<section id="sticky-menu" class="p-4 rounded-4 menu" style="transition: all 0.2s ease-in-out">
+			<div class="menu-header cursor-pointer d-flex gap-2 align-items-center">
+				<h5>Hello, username!</h5>
+				<button class="fa-regular fa-eye fs-4 fw-bold"></button>
+			</div>
+			<div class="menu-body px-1 d-flex flex-column gap-2 py-4 overflow-hidden text-black">
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Total Orders</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">119,354</div>
+				</div>
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Current Balance</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">$524,158</div>
+				</div>
+			</div>
+		</section>
+		<section id="mode-switch-wrapper" class="rounded-pill bg-grey border text-black">
+			<i class="fa-regular fa-sun fs-4 p-1" style="width: 3rem"></i>
+			<i class="fa-solid fa-moon fs-4 p-1" style="width: 3rem"></i>
+			<button id="mode-switch" class="position-absolute"></button>
+		</section>
+		<main id="main" style="padding-top: 160px; padding-left: 140px" class="d-flex">
+			<div class="d-flex justify-content-between align-items-start mx-auto" style="gap: 50px">
+				<div style="width: 880px">
+					<div class="bg-card rounded-3 w-100 p-4 d-flex flex-column gap-3">
+						<h5 class="mb-5 fw-bold">Ticket #2158702</h5>
+						<div class="d-flex gap-5 flex-column">
+							<div class="bg-grey p-4 text-black rounded-3" style="max-width: 535px">
+								<div class="fs-sm fw-bold mb-1">Username | 2024-09-01 15:41:31</div>
+								<div class="fs-sm fw-bold">
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur inventore eaque rem ex eligendi, aperiam quo velit labore? Sit deleniti iusto, architecto, ullam,
+									repellat consequatur quis inventore placeat maiores magni cum. Possimus suscipit neque quam.
+								</div>
+							</div>
+							<div class="bg-grey p-4 text-black rounded-3 ms-auto" style="max-width: 535px">
+								<div class="fs-sm fw-bold mb-1">Username | 2024-09-01 15:41:31</div>
+								<div class="fs-sm fw-bold">
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur inventore eaque rem ex eligendi, aperiam quo velit labore? Sit deleniti iusto, architecto, ullam,
+									repellat consequatur quis inventore placeat maiores magni cum. Possimus suscipit neque quam.
+								</div>
+							</div>
+							<div class="bg-grey p-4 text-black rounded-3" style="max-width: 535px">
+								<div class="fs-sm fw-bold mb-1">Username | 2024-09-01 15:41:31</div>
+								<div class="fs-sm fw-bold">
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur inventore eaque rem ex eligendi, aperiam quo velit labore? Sit deleniti iusto, architecto, ullam,
+									repellat consequatur quis inventore placeat maiores magni cum. Possimus suscipit neque quam.
+								</div>
+							</div>
+						</div>
+						<textarea class="form-control my-5 text-black fs-5" rows="7"></textarea>
+						<button class="bg-submit rounded-3 fs-5 fw-bold py-3">SUBMIT</button>
+					</div>
+				</div>
+				<div style="width: 636px">
+					<div class="bg-card rounded-4 p-4">
+						<div class="fs-4 m-4 fw-bold d-flex justify-content-between align-items-center">Ticket Details</div>
+						<div class="d-flex gap-4 flex-column rounded-bottom-4 p-4">
+							<h6>Sometimes it can take up to 6 hours for us to respond, depending on the tickets overload.</h6>
+							<div class="d-flex pt-4 gap-4 text-black">
+								<div class="d-flex px-4 py-3 rounded-3 flex-column gap-s align-items-center bg-grey">
+									<div class="fs-sm fw-bold">TICKET ID</div>
+									<h6 class="bg-grey-badge px-1 py-s rounded-pill">#2158702</h6>
+								</div>
+								<div class="d-flex px-4 py-3 rounded-3 flex-column gap-s align-items-center bg-grey">
+									<div class="fs-sm fw-bold">SUBJECT</div>
+									<h6 class="bg-info py-s px-1 rounded-pill">ELITE-Order</h6>
+								</div>
+								<div class="d-flex px-4 py-3 rounded-3 flex-column gap-s align-items-center bg-grey">
+									<div class="fs-sm fw-bold">REQUEST</div>
+									<h6 class="bg-info px-1 py-s rounded-pill">Speed-up</h6>
+								</div>
+							</div>
+							<div class="d-flex flex-wrap pb-4 gap-4 text-black">
+								<div class="d-flex px-m py-3 rounded-3 flex-column gap-s align-items-center bg-grey">
+									<div class="fs-sm fw-bold">RESPONSE TIME</div>
+									<h6 class="bg-success py-s px-2 rounded-pill">0 - 1 Hr</h6>
+								</div>
+								<div class="d-flex px-m py-3 rounded-3 flex-column gap-s align-items-center bg-grey">
+									<div class="fs-sm fw-bold">DEPARTMENT</div>
+									<h6 class="bg-grey-badge py-s px-2 rounded-pill">BACKEND SUPPORT</h6>
+								</div>
+							</div>
+							<h6 class="mb-4">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, quidem tempora ducimus quisquam eligendi ipsa delectus et autem harum blanditiis dignissimos rerum sed!
+								Fuga cumque nisi accusamus vel! Blanditiis, at.
+							</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<section id="copyright" class="fs-6 fw-bold position-fixed" style="bottom: 2rem; right: 3rem">&copy; Copyright. All Right Reserved.</section>
+		<script src="../../assets/js/popper.js"></script>
+		<script src="../../assets/js/bootstrap.min.js"></script>
+		<script src="../../assets/js/custom.js"></script>
+		<script src="../../assets/js/dashboard/color-mode.js"></script>
+		<script src="../../assets/js/dashboard/sticky-menu.js"></script>
+		<script src="../../assets/js/dashboard/buttons.js"></script>
+		<script src="../../assets/js/dashboard/popover.js"></script>
+	</body>
+</html>
