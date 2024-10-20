@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/dashboard.css" />
+		<link rel="stylesheet" href="../../assets/css/dashboard-dark.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css" />
+		<title>Panel 1</title>
+	</head>
+	<!-- sidebar is 130px wide -->
+	<body class="bg-mode">
+		<section id="sidebar" class="bg-main py-3 px-5 d-flex align-items-center flex-column position-fixed vh-100">
+			<button class="fa-solid fa-ellipsis fs-1 mb-3"></button>
+			<button class="fa-solid fa-globe fs-1"></button>
+			<div style="margin-top: 85px" class="d-flex flex-column gap-3">
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu active"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+				<button class="fa-solid fa-border-all fs-4 bg-black text-white rounded-pill p-3 m-auto btn-menu"></button>
+			</div>
+			<div class="mt-auto mb-4 d-flex gap-4 flex-column justify-content-center align-items-center">
+				<button class="fa-solid fa-user-gear fs-4"></button>
+				<button class="fa-solid fa-right-from-bracket fs-4"></button>
+			</div>
+		</section>
+		<section id="sticky-menu" class="p-4 rounded-4 menu" style="transition: all 0.2s ease-in-out">
+			<div class="menu-header cursor-pointer d-flex gap-2 align-items-center">
+				<h5>Hello, username!</h5>
+				<button class="fa-regular fa-eye fs-4 fw-bold"></button>
+			</div>
+			<div class="menu-body px-1 d-flex flex-column gap-2 py-4 overflow-hidden text-black">
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Total Orders</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">119,354</div>
+				</div>
+				<div class="bg-grey d-flex flex-column gap-s align-items-center p-3 rounded-3">
+					<h6>Current Balance</h6>
+					<div class="bg-grey-badge w-100 fw-bold text-center rounded-pill">$524,158</div>
+				</div>
+			</div>
+		</section>
+		<section id="mode-switch-wrapper" class="rounded-pill bg-grey border text-black">
+			<i class="fa-regular fa-sun fs-4 p-1" style="width: 3rem"></i>
+			<i class="fa-solid fa-moon fs-4 p-1" style="width: 3rem"></i>
+			<button id="mode-switch" class="position-absolute"></button>
+		</section>
+		<main id="main" style="padding-top: 160px; padding-left: 140px" class="d-flex">
+			<div class="d-flex justify-content-between align-items-start mx-auto gap-m">
+				<div style="width: 738px" class="d-flex flex-column">
+					<div class="bg-card rounded-3 w-100 p-4 d-flex flex-column gap-3">
+						<h5 class="mb-2 fw-bold">Add Funds</h5>
+						<div class="form-icon-group">
+							<select class="form-select form-select-lg py-3 fs-6 form-control">
+								<option>Payoneer, Paypal, Skrill, Cryptocurrency - BNB - and more(3% bonus)</option>
+							</select>
+							<label class="fa-solid fa-chevron-down form-end-icon p-2 form-label rounded-3 bg-grey-badge"></label>
+						</div>
+						<div class="form-icon-group">
+							<select class="form-select form-select-lg py-3 fs-6 form-control">
+								<option></option>
+							</select>
+							<label class="fa-solid fa-chevron-down form-end-icon p-2 form-label rounded-3 bg-grey-badge"></label>
+						</div>
+						<button class="bg-submit rounded-3 fs-5 fw-bold py-3 my-4">SUBMIT</button>
+						<h6 class="fs-sm w-75">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus labore dolor nam fuga delectus aperiam! Tempora neque quam possimus magnam nulla dolore eos voluptatem,
+							libero voluptate sunt maxime, similique exercitationem, officiis fuga. Harum eos sapiente delectus ipsam odit amet assumenda!
+						</h6>
+					</div>
+					<div class="d-flex mx-auto gap-3 my-5">
+						<div style="width: 4.5rem; height: 3rem" class="rounded-3 bg-white d-flex justify-content-center align-items-center">
+							<img src="../../assets/images/mastercard.png" width="70%" alt="" />
+						</div>
+						<div style="width: 4.5rem; height: 3rem" class="rounded-3 bg-white d-flex justify-content-center align-items-center">
+							<img src="../../assets/images/visa.png" width="70%" alt="" />
+						</div>
+						<div style="width: 4.5rem; height: 3rem" class="rounded-3 bg-white d-flex justify-content-center align-items-center">
+							<img src="../../assets/images/payoneer.png" width="70%" alt="" />
+						</div>
+						<div style="width: 4.5rem; height: 3rem" class="rounded-3 bg-white d-flex justify-content-center align-items-center">
+							<img src="../../assets/images/skrill.png" width="70%" alt="" />
+						</div>
+						<div style="width: 4.5rem; height: 3rem" class="rounded-3 bg-white d-flex justify-content-center align-items-center">
+							<img src="../../assets/images/bitcoin.png" width="50%" alt="" />
+						</div>
+					</div>
+				</div>
+				<div style="width: 1030px" class="bg-card px-4 py-5 rounded-3">
+					<div class="mb-3 d-flex justify-content-between align-items-center me-3">
+						<div class="form-icon-group">
+							<input type="name" placeholder="keyword" style="width: 500px" class="form-control form-control-lg" />
+							<button class="fa-solid fa-search form-end-icon bg-grey-badge p-2"></button>
+						</div>
+						<div class="position-relative" style="text-transform: none">
+							<button class="fa-solid fa-sliders fs-5 btn-filter"></button>
+							<div class="position-absolute bg-white rounded-3 d-flex flex-column gap-3 fs-5 text-black" style="right: 0; top: 3rem; width: 290px" id="filter-menu">
+								<div class="form-check" style="width: fit-content">
+									<input class="form-check-input" type="checkbox" value="" id="allstatus" />
+									<label class="form-check-label ms-2 fw-semibold" for="allstatus"> All Status </label>
+								</div>
+								<div class="form-check" style="width: fit-content">
+									<input class="form-check-input" type="checkbox" value="" id="pending" />
+									<label class="form-check-label ms-2 fw-semibold" for="pending"> Pending </label>
+								</div>
+								<div class="form-check" style="width: fit-content">
+									<input class="form-check-input" type="checkbox" value="" id="inprogress" />
+									<label class="form-check-label ms-2 fw-semibold" for="inprogress"> In Progress </label>
+								</div>
+								<div class="form-check" style="width: fit-content">
+									<input class="form-check-input" type="checkbox" value="" id="completed" />
+									<label class="form-check-label ms-2 fw-semibold" for="completed"> Completed </label>
+								</div>
+								<div class="form-check" style="width: fit-content">
+									<input class="form-check-input" type="checkbox" value="" id="partial" />
+									<label class="form-check-label ms-2 fw-semibold" for="partial"> Partial </label>
+								</div>
+								<div class="form-check" style="width: fit-content">
+									<input class="form-check-input" type="checkbox" value="" id="processing" />
+									<label class="form-check-label ms-2 fw-semibold" for="processing"> Processing </label>
+								</div>
+								<div class="form-check" style="width: fit-content">
+									<input class="form-check-input" type="checkbox" value="" id="canceled" />
+									<label class="form-check-label ms-2 fw-semibold" for="canceled"> Canceled </label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<table class="table">
+						<thead class="text-white fw-semibold fs-5">
+							<tr>
+								<th style="width: 18%" class="ps-5">ID</th>
+								<th style="width: 18%">Method</th>
+								<th style="width: 20%">Date</th>
+								<th style="width: 20%">Amount</th>
+								<th style="width: 24%" class="text-center">Status</th>
+							</tr>
+						</thead>
+						<tbody class="text-white fw-semibold fs-5">
+							<tr>
+								<td class="ps-5">2158702</td>
+								<td>USDT</td>
+								<td>2024-09-04<br />17:54:28</td>
+								<td>$10.00</td>
+								<td class="text-center">
+									<button class="rounded-2 bg-success px-5 py-s mx-auto text-black" style="width: 90%">Complete</button>
+								</td>
+							</tr>
+							<tr>
+								<td class="ps-5">2158702</td>
+								<td>USDT</td>
+								<td>2024-09-04<br />17:54:28</td>
+								<td>$10.00</td>
+								<td class="text-center">
+									<button class="rounded-2 bg-success px-5 py-s mx-auto text-black" style="width: 90%">Complete</button>
+								</td>
+							</tr>
+							<tr>
+								<td class="ps-5">2158702</td>
+								<td>USDT</td>
+								<td>2024-09-04<br />17:54:28</td>
+								<td>$10.00</td>
+								<td class="text-center">
+									<button class="rounded-2 bg-success px-5 py-s mx-auto text-black" style="width: 90%">Complete</button>
+								</td>
+							</tr>
+							<tr>
+								<td class="ps-5">2158702</td>
+								<td>USDT</td>
+								<td>2024-09-04<br />17:54:28</td>
+								<td>$10.00</td>
+								<td class="text-center">
+									<button class="rounded-2 bg-success px-5 py-s mx-auto text-black" style="width: 90%">Complete</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="d-flex gap-3 mb-3">
+						<button class="ms-auto fa-solid fa-chevron-left text-black fs-6 bg-white rounded-3 py-1 px-2" id="btn-pagination-prev"></button>
+						<input type="text" value="1" class="text-center bg-white rounded-3 text-black" style="max-width: 3rem" id="input-pagination" />
+						<button class="fa-solid fa-chevron-right text-black fs-6 bg-white rounded-3 py-1 px-2" id="btn-pagination-next"></button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<section id="copyright" class="fs-6 fw-bold position-fixed" style="bottom: 2rem; right: 3rem">&copy; Copyright. All Right Reserved.</section>
+		<script src="../../assets/js/popper.js"></script>
+		<script src="../../assets/js/bootstrap.min.js"></script>
+		<script src="../../assets/js/custom.js"></script>
+		<script src="../../assets/js/dashboard/color-mode.js"></script>
+		<script src="../../assets/js/dashboard/sticky-menu.js"></script>
+		<script src="../../assets/js/dashboard/buttons.js"></script>
+		<script src="../../assets/js/dashboard/popover.js"></script>
+	</body>
+</html>
