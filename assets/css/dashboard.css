@@ -51,10 +51,12 @@ td {
 th {
 	padding: 1rem 2rem 1rem 1rem !important;
 	background-color: transparent !important;
+	border: none !important;
 }
 
 td {
 	padding: 2.5rem 2rem 2.5rem 1rem !important;
+	border: none !important;
 }
 
 tr th:first-child,
